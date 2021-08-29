@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:title" content="[C++] 指標">
+    <meta name="description" content="C++ 指標的用法">
+  <meta property="og:description" content="C++ 指標的用法">
+    <meta property="og:type" content="blog">
+  <title>[C++] 指標</title>
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="📖">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+  <link rel="stylesheet" type="text/css" href="css/notablog.css">
+  <link rel="stylesheet" type="text/css" href="css/theme.css">
+  <style>
+    :root {
+      font-size: 18px;
+    }
+
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+    <a href="index.html">
+      <div class="Navbar__Btn"><span>📖</span> <span>Home</span></div>
+    </a>
+                                                                    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="C++_notes.html">
+      <div class="Navbar__Btn"> <span>C++筆記</span></div>
+    </a>
+                <span class="Navbar__Delim">&centerdot;</span>
+    <a href="about.html">
+      <div class="Navbar__Btn"><span>😀</span> <span>About</span></div>
+    </a>
+          </nav>
+  <header class="Header">
+          <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+        <h1 class="Header__Title">[C++] 指標</h1>
+            <div class="DateTagBar">
+                <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Mar 22, 2021</span>
+                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+            <a href="tag/C++.html">C++</a>
+          </span>
+                  </div>
+          </header>
+      <article id="https://www.notion.so/e79e41a3ec34446cba1f9edeb21e9940" class="PageRoot"><blockquote id="https://www.notion.so/44401630c8bc4330806e7d10cfab77da" class="ColorfulBlock ColorfulBlock--ColorDefault Quote"><span class="SemanticStringArray"><span class="SemanticString">實作日期：20210322</span></span></blockquote><div id="https://www.notion.so/b3f3f87ce8ef4c588b58c1f55bf628e9" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://www.educative.io/edpresso/how-to-resolve-the-error-invalid-conversion-from-int-to-int-star">How to resolve the error: &quot;invalid conversion from int to int*&quot;</a></span><span class="SemanticString">
+不能直接指定位置(0除外)</span></span></p></div><h2 id="https://www.notion.so/d59202ea7ad14272b726b98ece74b326" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/d59202ea7ad14272b726b98ece74b326"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">指標的宣告</span></span></h2><pre id="https://www.notion.so/b588f762a4d249d6bfcc853e2f09d0c4" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>int *p = 0;
+
+int n = 10;
+int *p2 = &amp;n; //&amp;取得該變數的位置
+</span></span></span></code></pre><div id="https://www.notion.so/51d10c4170ce409c811ffc05a662d253" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">&amp;是提領運算子，可以取得變數的記憶體位置。</span></span></p></div><h2 id="https://www.notion.so/0520555b12f84f17af65a8fb62e7510c" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/0520555b12f84f17af65a8fb62e7510c"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">計算陣列長度的方式</span></span></h2><pre id="https://www.notion.so/3baaaaa825534f4fa5605f1f54e7e906" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>int arr[10] = {0};
+int *p = arr
+
+cout&lt;&lt;end(arr) - begin(arr)&lt;&lt;endl;
+cout&lt;&lt;sizeof(arr)/sizeof(*arr)&lt;&lt;endl;
+cout&lt;&lt;*(&amp;arr + 1) -arr&lt;&lt;endl; //難以理解
+</span></span></span></code></pre><h2 id="https://www.notion.so/6a0a77a572a246f7a7ab3d94f3d41bdc" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/6a0a77a572a246f7a7ab3d94f3d41bdc"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">手動配置記憶體空間</span></span></h2><pre id="https://www.notion.so/1eb8a0f43ab0497e8079b9ad205bd1e4" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>int *p new int;
+int p2 new int(100);
+int p3 new int[10]{0,1,2,3};
+</span></span></span></code></pre><div id="https://www.notion.so/b8f39237b72a487d837b2d0f0bf0162b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">可以做到和[[vector]]一樣的動態陣列，但直接用[[vector]]比較快。</span></span></p></div><div id="https://www.notion.so/f6114695f7914fd9b82546c33b585577" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">配置二維陣列還沒看</span></span></p></div><div id="https://www.notion.so/65c62896b3a04379a0804476c1857329" class="Divider"></div><div id="https://www.notion.so/b2da4d7ec9c14958a4a179ee042d8504" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">參考資料：</span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://openhome.cc/Gossip/CppGossip/">https://openhome.cc/Gossip/CppGossip/</a></span></span></p></div></article>  <footer class="Footer">
+        <div>&copy; Alan's blog 2019</div>
+        <div>&centerdot;</div>
+        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+            rel="noopener noreferrer">Notablog</a>.
+        </div>
+    </footer>
+</body>
+
+</html>
