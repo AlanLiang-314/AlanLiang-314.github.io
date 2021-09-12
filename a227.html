@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:title" content="[題解] a227 三龍杯 -> 河內之塔">
+    <meta property="og:type" content="blog">
+  <title>[題解] a227 三龍杯 -> 河內之塔</title>
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="📖">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+  <link rel="stylesheet" type="text/css" href="css/notablog.css">
+  <link rel="stylesheet" type="text/css" href="css/theme.css">
+  <style>
+    :root {
+      font-size: 18px;
+    }
+
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+    <a href="index.html">
+      <div class="Navbar__Btn"><span>📖</span> <span>Home</span></div>
+    </a>
+                                                                            <span class="Navbar__Delim">&centerdot;</span>
+    <a href="C++_notes.html">
+      <div class="Navbar__Btn"><span>🕛</span> <span>C++筆記</span></div>
+    </a>
+                <span class="Navbar__Delim">&centerdot;</span>
+    <a href="about.html">
+      <div class="Navbar__Btn"><span>🧑</span> <span>About</span></div>
+    </a>
+          </nav>
+  <header class="Header">
+          <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+        <h1 class="Header__Title">[題解] a227 三龍杯 -> 河內之塔</h1>
+            <div class="DateTagBar">
+                <span class="DateTagBar__Item DateTagBar__Date">Posted on Sun, Aug 29, 2021</span>
+                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
+            <a href="tag/題解.html">題解</a>
+          </span>
+                <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+            <a href="tag/C++.html">C++</a>
+          </span>
+                  </div>
+          </header>
+      <article id="https://www.notion.so/5ac842f3a6e84a5e97bb4a8f1d9e9419" class="PageRoot"><pre id="https://www.notion.so/6a0dd2136144465bb552fa806c4e8750" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">solution</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">,</span><span class="token keyword">int</span> from<span class="token punctuation">,</span><span class="token keyword">int</span> to<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    string a<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"A"</span><span class="token punctuation">,</span><span class="token string">"B"</span><span class="token punctuation">,</span><span class="token string">"C"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">></span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> mid<span class="token operator">=</span><span class="token number">3</span><span class="token operator">-</span><span class="token punctuation">(</span>from<span class="token operator">+</span>to<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">solution</span><span class="token punctuation">(</span>N<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>from<span class="token punctuation">,</span>mid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout<span class="token operator">&lt;&lt;</span><span class="token string">"Move ring "</span><span class="token operator">&lt;&lt;</span>N<span class="token operator">&lt;&lt;</span><span class="token string">" from "</span><span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>from<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span><span class="token string">" to "</span><span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>to<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        <span class="token function">solution</span><span class="token punctuation">(</span>N<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>mid<span class="token punctuation">,</span>to<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        cout<span class="token operator">&lt;&lt;</span><span class="token string">"Move ring "</span><span class="token operator">&lt;&lt;</span>N<span class="token operator">&lt;&lt;</span><span class="token string">" from "</span><span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>from<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span><span class="token string">" to "</span><span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>to<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>N<span class="token operator">&lt;=</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cin<span class="token operator">>></span>N<span class="token punctuation">;</span>
+        <span class="token function">solution</span><span class="token punctuation">(</span>N<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span></span></code></pre><div id="https://www.notion.so/4028e10526d841cdb81e2bfa576169bc" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">解題想法：</span></span></p></div></article>  <footer class="Footer">
+        <div>&copy; Alan's blog 2019</div>
+        <div>&centerdot;</div>
+        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+            rel="noopener noreferrer">Notablog</a>.
+        </div>
+    </footer>
+</body>
+
+</html>

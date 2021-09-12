@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:title" content="[題解]f706: 時區 (Zone)">
+    <meta property="og:type" content="blog">
+  <title>[題解]f706: 時區 (Zone)</title>
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="📖">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+  <link rel="stylesheet" type="text/css" href="css/notablog.css">
+  <link rel="stylesheet" type="text/css" href="css/theme.css">
+  <style>
+    :root {
+      font-size: 18px;
+    }
+
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+    <a href="index.html">
+      <div class="Navbar__Btn"><span>📖</span> <span>Home</span></div>
+    </a>
+                                                                            <span class="Navbar__Delim">&centerdot;</span>
+    <a href="C++_notes.html">
+      <div class="Navbar__Btn"><span>🕛</span> <span>C++筆記</span></div>
+    </a>
+                <span class="Navbar__Delim">&centerdot;</span>
+    <a href="about.html">
+      <div class="Navbar__Btn"><span>🧑</span> <span>About</span></div>
+    </a>
+          </nav>
+  <header class="Header">
+          <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+        <h1 class="Header__Title">[題解]f706: 時區 (Zone)</h1>
+            <div class="DateTagBar">
+                <span class="DateTagBar__Item DateTagBar__Date">Posted on Sat, Sep 4, 2021</span>
+                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
+            <a href="tag/題解.html">題解</a>
+          </span>
+                <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--green">
+            <a href="tag/python.html">python</a>
+          </span>
+                  </div>
+          </header>
+      <article id="https://www.notion.so/79ee8e0bd7784dbc82a0cca76f518d5f" class="PageRoot"><div id="https://www.notion.so/9498047cfe0047bf9541347a7ac05828" class="Bookmark"><a href="https://zerojudge.tw/ShowProblem?problemid=f706"><h5 class="Bookmark__Title">f706. 時區 (Zone) - 高中生程式解題系統</h5><p class="Bookmark__Link">https://zerojudge.tw/ShowProblem?problemid=f706</p></a></div><pre id="https://www.notion.so/3e77650af8cc4897b22adde8407acfec" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token keyword">def</span> <span class="token function">zero</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> a <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">"0"</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> a
+
+H<span class="token punctuation">,</span>M<span class="token punctuation">,</span>S<span class="token punctuation">,</span>T <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+skip <span class="token operator">=</span> <span class="token number">90</span><span class="token operator">*</span>T
+M <span class="token operator">+=</span> skip<span class="token operator">%</span><span class="token number">60</span>
+H <span class="token operator">+=</span> skip<span class="token operator">//</span><span class="token number">60</span><span class="token operator">+</span>M<span class="token operator">//</span><span class="token number">60</span>
+M<span class="token operator">=</span>M<span class="token operator">%</span><span class="token number">60</span>
+H<span class="token operator">=</span>H<span class="token operator">%</span><span class="token number">36</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{}:{}:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>H<span class="token punctuation">,</span>zero<span class="token punctuation">(</span>M<span class="token punctuation">)</span><span class="token punctuation">,</span>zero<span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span></span></span></code></pre></article>  <footer class="Footer">
+        <div>&copy; Alan's blog 2019</div>
+        <div>&centerdot;</div>
+        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+            rel="noopener noreferrer">Notablog</a>.
+        </div>
+    </footer>
+</body>
+
+</html>
