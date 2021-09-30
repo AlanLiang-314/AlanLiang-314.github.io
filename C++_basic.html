@@ -1,1 +1,201 @@
-The template name has zero length, please check the "template" field in your Notion table.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:title" content="[進階程設] C++基礎">
+    <meta property="og:type" content="blog">
+  <title>[進階程設] C++基礎</title>
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+  <link rel="stylesheet" type="text/css" href="css/notablog.css">
+  <link rel="stylesheet" type="text/css" href="css/theme.css">
+  <style>
+    :root {
+      font-size: 18px;
+    }
+
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+    <a href="index.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span> <span>Home</span></div>
+    </a>
+                                                                                                                    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="certification.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span> <span>檢定成績</span></div>
+    </a>
+                        <span class="Navbar__Delim">&centerdot;</span>
+    <a href="dashboard.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span> <span>儀表板</span></div>
+    </a>
+                <span class="Navbar__Delim">&centerdot;</span>
+    <a href="C++_notes.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span> <span>C++筆記</span></div>
+    </a>
+                <span class="Navbar__Delim">&centerdot;</span>
+    <a href="about.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span> <span>關於</span></div>
+    </a>
+          </nav>
+  <header class="Header">
+          <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+        <div class="Header__Icon"><span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span></div>
+        <h1 class="Header__Title">[進階程設] C++基礎</h1>
+            <div class="DateTagBar">
+                <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Sep 23, 2021</span>
+                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
+            <a href="tag/進階程設課程.html">進階程設課程</a>
+          </span>
+                <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+            <a href="tag/C++.html">C++</a>
+          </span>
+                  </div>
+          </header>
+      <article id="https://www.notion.so/8660fb0cb429483f9fd0d75869dfb783" class="PageRoot"><div id="https://www.notion.so/f48b5aaf1e2043f09f4969676cacb2ed" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">用高一資訊課的題目來複習C++</span></span></p></div><details id="https://www.notion.so/8a7afe35af984c529aafca592c8349e4" class="ColorfulBlock ColorfulBlock--ColorDefault Toggle "><summary class="Toggle__Summary"><span class="SemanticStringArray"><span class="SemanticString">bmi計算</span></span></summary><div class="Toggle__Content"><pre id="https://www.notion.so/3a4fe8ca490b4ee29d0090a48bf3c79b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">float</span> kg<span class="token punctuation">,</span>cm<span class="token punctuation">,</span>bmi<span class="token punctuation">,</span>b_kg<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"cm"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>cm<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"kg"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>kg<span class="token punctuation">;</span>
+    bmi <span class="token operator">=</span> kg<span class="token operator">/</span><span class="token punctuation">(</span><span class="token punctuation">(</span>cm<span class="token operator">/</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>cm<span class="token operator">/</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    b_kg <span class="token operator">=</span> <span class="token number">21</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span>cm<span class="token operator">/</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>cm<span class="token operator">/</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"bmi "</span><span class="token operator">&lt;&lt;</span>bmi<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>b_kg<span class="token operator">></span>kg<span class="token punctuation">)</span> <span class="token punctuation">{</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"+"</span><span class="token operator">&lt;&lt;</span>b_kg<span class="token operator">-</span>kg<span class="token operator">&lt;&lt;</span><span class="token string">"kg"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>b_kg<span class="token operator">&lt;</span>kg<span class="token punctuation">)</span> <span class="token punctuation">{</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"-"</span><span class="token operator">&lt;&lt;</span>kg<span class="token operator">-</span>b_kg<span class="token operator">&lt;&lt;</span><span class="token string">"kg"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"great"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre></div></details><details id="https://www.notion.so/2616ca386ce34a40963c57d1841e0f74" class="ColorfulBlock ColorfulBlock--ColorDefault Toggle "><summary class="Toggle__Summary"><span class="SemanticStringArray"><span class="SemanticString">錢</span></span></summary><div class="Toggle__Content"><pre id="https://www.notion.so/5fd20811bedd4eeab4a8268a2d1e7150" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> money<span class="token operator">=</span><span class="token number">2000</span><span class="token punctuation">,</span>spend<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>money<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cout<span class="token operator">&lt;&lt;</span><span class="token string">"ªáŠh€Ö"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        cin<span class="token operator">>></span>spend<span class="token punctuation">;</span>
+        money<span class="token operator">-=</span>spend<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>money<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cout<span class="token operator">&lt;&lt;</span><span class="token string">"³Ñ"</span><span class="token operator">&lt;&lt;</span>money<span class="token operator">&lt;&lt;</span><span class="token string">"€ž"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"no money  "</span><span class="token operator">&lt;&lt;</span>money<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre></div></details><details id="https://www.notion.so/590f83b3d93b4f399ebf56ae1b0974f0" class="ColorfulBlock ColorfulBlock--ColorDefault Toggle "><summary class="Toggle__Summary"><span class="SemanticStringArray"><span class="SemanticString">7科加權平均</span></span></summary><div class="Toggle__Content"><pre id="https://www.notion.so/9845176da480472a8a995bc850790260" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>sum<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token punctuation">,</span>val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">float</span> avg<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"輸入7科成績"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">7</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cin<span class="token operator">>></span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"輸入7科權數"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">7</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cin<span class="token operator">>></span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	val<span class="token operator">+=</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">7</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        sum<span class="token operator">+=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    avg<span class="token operator">=</span>sum<span class="token operator">/</span>val<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"sum:"</span><span class="token operator">&lt;&lt;</span>sum<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"avg:"</span><span class="token operator">&lt;&lt;</span>avg<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre></div></details><details id="https://www.notion.so/7aae1e9e6de64492955ca187bb7de90b" class="ColorfulBlock ColorfulBlock--ColorDefault Toggle "><summary class="Toggle__Summary"><span class="SemanticStringArray"><span class="SemanticString">聖誕樹星星</span></span></summary><div class="Toggle__Content"><pre id="https://www.notion.so/87a95fc9ee1b4acc9d6923a36a35a21f" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>n<span class="token operator">-</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            cout<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span><span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            cout<span class="token operator">&lt;&lt;</span><span class="token string">"*"</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cout<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre></div></details><details id="https://www.notion.so/af949be7b4414dac8ae1b8624a3b92b2" class="ColorfulBlock ColorfulBlock--ColorDefault Toggle "><summary class="Toggle__Summary"><span class="SemanticStringArray"><span class="SemanticString">手動猜數字</span></span></summary><div class="Toggle__Content"><pre id="https://www.notion.so/21133357aa9b4bbc856e607a62429715" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> ans<span class="token punctuation">,</span>up<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span>down<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>guess<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"input code"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin<span class="token operator">>></span>ans<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>ans<span class="token operator">></span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>ans<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> cout<span class="token operator">&lt;&lt;</span><span class="token string">"out of range"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>guess<span class="token operator">!=</span>ans<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cin<span class="token operator">>></span>guess<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>guess<span class="token operator">></span>ans<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            up<span class="token operator">=</span>guess<span class="token punctuation">;</span>
+            cout<span class="token operator">&lt;&lt;</span><span class="token string">"range: "</span><span class="token operator">&lt;&lt;</span>down<span class="token operator">&lt;&lt;</span><span class="token string">"~"</span><span class="token operator">&lt;&lt;</span>up<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>guess<span class="token operator">&lt;</span>ans<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            down<span class="token operator">=</span>guess<span class="token punctuation">;</span>
+            cout<span class="token operator">&lt;&lt;</span><span class="token string">"range: "</span><span class="token operator">&lt;&lt;</span>down<span class="token operator">&lt;&lt;</span><span class="token string">"~"</span><span class="token operator">&lt;&lt;</span>up<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"good"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre></div></details><details id="https://www.notion.so/4f15a384d831494ab44fe40fce206371" class="ColorfulBlock ColorfulBlock--ColorDefault Toggle "><summary class="Toggle__Summary"><span class="SemanticStringArray"><span class="SemanticString">大樂透抽獎</span></span></summary><div class="Toggle__Content"><pre id="https://www.notion.so/4e40ea6224924c8d8be0dbab9ffd3d94" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ctime></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">srand</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">42</span><span class="token punctuation">]</span><span class="token punctuation">,</span>num<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">42</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">42</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        num<span class="token operator">=</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">42</span><span class="token punctuation">;</span>
+        <span class="token function">swap</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>a<span class="token punctuation">[</span>num<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">6</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> cout<span class="token operator">&lt;&lt;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre></div></details></article>  <footer class="Footer">
+        <div>&copy; Alan's blog 2019</div>
+        <div>&centerdot;</div>
+        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+            rel="noopener noreferrer">Notablog</a>.
+        </div>
+    </footer>
+</body>
+
+</html>
