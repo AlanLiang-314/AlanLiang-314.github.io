@@ -2,31 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
-  <meta name="theme-color" content="#FFFFFF">
-  <meta property="og:title" content="[C++] vector">
-    <meta name="description" content="vector是一種長度可變的線性容器">
-  <meta property="og:description" content="vector是一種長度可變的線性容器">
-    <meta property="og:type" content="blog">
-  <title>[C++] vector</title>
-  <!-- Favicon -->
-    <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
-  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
-  <link rel="stylesheet" type="text/css" href="css/notablog.css">
-  <link rel="stylesheet" type="text/css" href="css/theme.css">
-  <style>
-    :root {
-      font-size: 18px;
-    }
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152513368-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
+  gtag('config', 'UA-152513368-1');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>[C++] vector&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="[C++] vector">
+  
+    <meta name="description" content="vector是一種長度可變的線性容器">
+    <meta property="og:description" content="vector是一種長度可變的線性容器">
+  
+  
+    <meta property="og:image" content="https://img.icons8.com/windows/256/000000/rss-logo.png">
+  
+  <style>
     .DateTagBar {
       margin-top: 1.0rem;
     }
@@ -35,39 +52,120 @@
 
 <body>
   <nav class="Navbar">
-    <a href="index.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span> <span>Home</span></div>
-    </a>
-                                                                                                                    <span class="Navbar__Delim">&centerdot;</span>
-    <a href="certification.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span> <span>檢定成績</span></div>
-    </a>
-                        <span class="Navbar__Delim">&centerdot;</span>
-    <a href="dashboard.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span> <span>儀表板</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="C++_notes.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span> <span>C++筆記</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="about.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span> <span>關於</span></div>
-    </a>
-          </nav>
-  <header class="Header">
-          <div class="Header__Spacer Header__Spacer--NoCover">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
     </div>
-        <div class="Header__Icon"><span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span></div>
-        <h1 class="Header__Title">[C++] vector</h1>
-            <div class="DateTagBar">
-                <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Mar 29, 2021</span>
-                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span>&nbsp;
+          
+          <span>儀表板</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+      <div class="Header__Icon">
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      </div>
+    
+    <h1 class="Header__Title">[C++] vector</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Mar 29, 2021</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
             <a href="tag/C++.html">C++</a>
           </span>
-                  </div>
-          </header>
-      <article id="https://www.notion.so/c5615bbfc2ad4f0090182530e68a2ef5" class="PageRoot"><blockquote id="https://www.notion.so/155c9fd300d54925baaf1067a9193348" class="ColorfulBlock ColorfulBlock--ColorDefault Quote"><span class="SemanticStringArray"><span class="SemanticString">實作日期：20210329</span></span></blockquote><div id="https://www.notion.so/d0c92e9a396c42e98f157486ebaca818" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">vector是一種長度</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">可變</strong></span><span class="SemanticString">的線性容器，要使用時須引入</span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">#include &lt;vector&gt;</code></span></span></p></div><h2 id="https://www.notion.so/05dabda1fd0f4c8da1eefab42286acfc" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/05dabda1fd0f4c8da1eefab42286acfc"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">宣告</span></span></h2><pre id="https://www.notion.so/20f523be1e394ed4a2466e1788522572" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>vector<span class="token operator">&lt;</span>變數型態<span class="token operator">></span> 名稱<span class="token punctuation">;</span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/c5615bbfc2ad4f0090182530e68a2ef5" class="PageRoot"><blockquote id="https://www.notion.so/155c9fd300d54925baaf1067a9193348" class="ColorfulBlock ColorfulBlock--ColorDefault Quote"><span class="SemanticStringArray"><span class="SemanticString">實作日期：20210329</span></span></blockquote><div id="https://www.notion.so/d0c92e9a396c42e98f157486ebaca818" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">vector是一種長度</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">可變</strong></span><span class="SemanticString">的線性容器，要使用時須引入</span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">#include &lt;vector&gt;</code></span></span></p></div><h2 id="https://www.notion.so/05dabda1fd0f4c8da1eefab42286acfc" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/05dabda1fd0f4c8da1eefab42286acfc"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">宣告</span></span></h2><pre id="https://www.notion.so/20f523be1e394ed4a2466e1788522572" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>vector<span class="token operator">&lt;</span>變數型態<span class="token operator">></span> 名稱<span class="token punctuation">;</span>
 </span></span></span></code></pre><div id="https://www.notion.so/72eeb64d655d4c00aebbc8e03f5ba694" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">基本型態</span></span></p></div><pre id="https://www.notion.so/c67480a61d5e4dc18654bad7c0943e7c" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> v1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 </span></span></span></code></pre><div id="https://www.notion.so/e32bb8c3c9384bf3b73c108fa3ed7908" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">直接賦值</span></span></p></div><pre id="https://www.notion.so/61b95fc26b8a4f16917bfacb521e2d57" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">v2</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span></span></code></pre><div id="https://www.notion.so/b4daf1d6ae384ca2bd5e0073eb29b07d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">宣告長度10的vector</span></span></p></div><pre id="https://www.notion.so/154105c9c6d94a5aae6e2dd4efa665be" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">v3</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -78,13 +176,14 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 </span></span></span></code></pre><div id="https://www.notion.so/5edea81959f74726bb7d10389a7ca659" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">複製v的內容到v4中</span></span></p></div><pre id="https://www.notion.so/972700b9b5cd472e814598fb7614feb9" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> v <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">v5</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>begin<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">,</span>v<span class="token punctuation">.</span>end<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span></span></code></pre><div id="https://www.notion.so/76417035f59444c0aa5575a2753203cb" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">複製v從v[2]到最後的內容
-從陣列複製也適用</span></span></p></div><h2 id="https://www.notion.so/43e76c4d349f4568bdf21116880260a6" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/43e76c4d349f4568bdf21116880260a6"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">物件方法</span></span></h2><h3 id="https://www.notion.so/e43cc9bfe54343db8ce06897a1166667" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/e43cc9bfe54343db8ce06897a1166667"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">iterators</span></span></h3><ul class="BulletedListWrapper"><li id="https://www.notion.so/8b40b035e1cd4f9c9f9a8e050096633e" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.begin</code></span></span></li><li id="https://www.notion.so/8df375f7f2af4ef9828826fcd648b1e8" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.end</code></span></span></li></ul><h3 id="https://www.notion.so/8722753b2b8249f78e9f5273c65e43a7" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/8722753b2b8249f78e9f5273c65e43a7"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">容量</span></span></h3><ul class="BulletedListWrapper"><li id="https://www.notion.so/e022689152ec4aa2a2b5b372329e769f" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.size()</code></span><span class="SemanticString">求vector長度</span></span></li><li id="https://www.notion.so/89b119b4a6794635876b7e9cef986088" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v[offset]</code></span><span class="SemanticString">取得offset的值</span></span></li><li id="https://www.notion.so/e225a42372a84ed9987547fa89124340" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.empty()</code></span><span class="SemanticString">求vector是否長度為0，如為0回傳1</span></span></li><li id="https://www.notion.so/3e978158242c4fafb58b768b7195899a" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.push_back()</code></span><span class="SemanticString">從最後一個加入元素，類似</span><span class="SemanticString">python的append</span></span></li><li id="https://www.notion.so/4aa0c52c200747ae896af9daf3989caf" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.pop_back()</code></span><span class="SemanticString">刪除最後一個元素</span></span></li><li id="https://www.notion.so/462b3ecb29504a9188cf6dc689f68833" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.clear()</code></span><span class="SemanticString">清空vector</span></span></li></ul><h2 id="https://www.notion.so/05e5b94430864891b41c84a5ab7d0282" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/05e5b94430864891b41c84a5ab7d0282"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">迭代器(iterator)</span></span></h2><div id="https://www.notion.so/89afad46de27498983e4a2edde84ff78" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">還沒讀完，有些難理解，可以參考 </span></span></p></div><div id="https://www.notion.so/52e13ab8946942fbaa891b3771087a20" class="Bookmark"><a href="https://crmne0707.pixnet.net/blog/post/318479072-c%2B%2B-%E8%BF%AD%E4%BB%A3%E5%99%A8-iterator"><h5 class="Bookmark__Title">C++ 迭代器 iterator @ 程式語言教學 :: 痞客邦 ::</h5><p class="Bookmark__Desc">(2) 上述所言的迭代器乃是正向迭代器，順序由前到後。還有一種迭代器為逆向迭代器，順序由後到前。正向迭代器和逆向迭代器為不同的資料形態。 (3) vector ::const_iterator I; 。其功用與一般迭代器幾乎相同，惟一不同者在於：常數迭代器僅只能對容器中資料進行 「讀取」的動作，而無法存入或更改其值。也需注意，我們無法將 常數迭代器的值指派給其他迭代器，沒事少用常數迭代器。</p><p class="Bookmark__Link">https://crmne0707.pixnet.net/blog/post/318479072-c%2B%2B-%E8%BF%AD%E4%BB%A3%E5%99%A8-iterator</p></a></div></article>  <footer class="Footer">
-        <div>&copy; Alan's blog 2019</div>
-        <div>&centerdot;</div>
-        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
-            rel="noopener noreferrer">Notablog</a>.
-        </div>
-    </footer>
+從陣列複製也適用</span></span></p></div><h2 id="https://www.notion.so/43e76c4d349f4568bdf21116880260a6" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/43e76c4d349f4568bdf21116880260a6"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">物件方法</span></span></h2><h3 id="https://www.notion.so/e43cc9bfe54343db8ce06897a1166667" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/e43cc9bfe54343db8ce06897a1166667"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">iterators</span></span></h3><ul class="BulletedListWrapper"><li id="https://www.notion.so/8b40b035e1cd4f9c9f9a8e050096633e" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.begin</code></span></span></li><li id="https://www.notion.so/8df375f7f2af4ef9828826fcd648b1e8" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.end</code></span></span></li></ul><h3 id="https://www.notion.so/8722753b2b8249f78e9f5273c65e43a7" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/8722753b2b8249f78e9f5273c65e43a7"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">容量</span></span></h3><ul class="BulletedListWrapper"><li id="https://www.notion.so/e022689152ec4aa2a2b5b372329e769f" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.size()</code></span><span class="SemanticString">求vector長度</span></span></li><li id="https://www.notion.so/89b119b4a6794635876b7e9cef986088" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v[offset]</code></span><span class="SemanticString">取得offset的值</span></span></li><li id="https://www.notion.so/e225a42372a84ed9987547fa89124340" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.empty()</code></span><span class="SemanticString">求vector是否長度為0，如為0回傳1</span></span></li><li id="https://www.notion.so/3e978158242c4fafb58b768b7195899a" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.push_back()</code></span><span class="SemanticString">從最後一個加入元素，類似</span><span class="SemanticString">python的append</span></span></li><li id="https://www.notion.so/4aa0c52c200747ae896af9daf3989caf" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.pop_back()</code></span><span class="SemanticString">刪除最後一個元素</span></span></li><li id="https://www.notion.so/462b3ecb29504a9188cf6dc689f68833" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">v.clear()</code></span><span class="SemanticString">清空vector</span></span></li></ul><h2 id="https://www.notion.so/05e5b94430864891b41c84a5ab7d0282" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/05e5b94430864891b41c84a5ab7d0282"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">迭代器(iterator)</span></span></h2><div id="https://www.notion.so/89afad46de27498983e4a2edde84ff78" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">還沒讀完，有些難理解，可以參考 </span></span></p></div><div id="https://www.notion.so/52e13ab8946942fbaa891b3771087a20" class="Bookmark"><a href="https://crmne0707.pixnet.net/blog/post/318479072-c%2B%2B-%E8%BF%AD%E4%BB%A3%E5%99%A8-iterator"><h5 class="Bookmark__Title">C++ 迭代器 iterator @ 程式語言教學 :: 痞客邦 ::</h5><p class="Bookmark__Desc">(2) 上述所言的迭代器乃是正向迭代器，順序由前到後。還有一種迭代器為逆向迭代器，順序由後到前。正向迭代器和逆向迭代器為不同的資料形態。 (3) vector ::const_iterator I; 。其功用與一般迭代器幾乎相同，惟一不同者在於：常數迭代器僅只能對容器中資料進行 「讀取」的動作，而無法存入或更改其值。也需注意，我們無法將 常數迭代器的值指派給其他迭代器，沒事少用常數迭代器。</p><p class="Bookmark__Link">https://crmne0707.pixnet.net/blog/post/318479072-c%2B%2B-%E8%BF%AD%E4%BB%A3%E5%99%A8-iterator</p></a></div></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
 </body>
 
 </html>

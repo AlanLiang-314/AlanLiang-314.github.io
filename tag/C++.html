@@ -2,196 +2,437 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
-  <meta name="theme-color" content="#FFFFFF">
-  <meta property="og:title" content="#C++ — Alan's blog">
-  <meta name="description" content="All posts tagged with C++">
-  <meta property="og:description" content="All posts tagged with C++">
+  <base href="../">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152513368-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152513368-1');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>#C++ | Alan&#39;s blog</title>
   <meta property="og:type" content="blog">
-  <title>#C++ — Alan's blog</title>
-  <!-- Favicon -->
-    <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834">
-    <base href="../">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
-  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
-  <link rel="stylesheet" type="text/css" href="css/theme.css">
-  <link rel="stylesheet" type="text/css" href="css/notablog.css">
-  <style>
-    :root {
-      font-size: 20px;
-    }
-  </style>
+  <meta property="og:title" content="#C++ | Alan&#39;s blog">
+  <meta name="description" content="Posts with tag #C++">
+  <meta property="og:description" content="Posts with tag #C++">
 </head>
 
 <body>
   <nav class="Navbar">
-    <a href="index.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span> <span>Home</span></div>
-    </a>
-                                                                                                                    <span class="Navbar__Delim">&centerdot;</span>
-    <a href="certification.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span> <span>檢定成績</span></div>
-    </a>
-                        <span class="Navbar__Delim">&centerdot;</span>
-    <a href="dashboard.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span> <span>儀表板</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="C++_notes.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span> <span>C++筆記</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="about.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span> <span>關於</span></div>
-    </a>
-          </nav>
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span>&nbsp;
+          
+          <span>儀表板</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+</nav>
   <header class="Header">
     <div class="Header__Spacer--NoCover"></div>
-    <h1 class="Header__Title"># C++</h1>
+    <h1 class="Header__Title">#C++</h1>
   </header>
   <article class="ArticleList">
-              <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="C++_basic.html">
-              [進階程設] C++基礎            </a>
-          </h3>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Sep 23, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
-            <a href="tag/進階程設課程.html">進階程設課程</a>
-          </span>
-                  <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="a227.html">
-              [題解] a227 三龍杯 -> 河內之塔            </a>
-          </h3>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Sun, Aug 29, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
-            <a href="tag/題解.html">題解</a>
-          </span>
-                  <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="struct.html">
-              [C++] struct            </a>
-          </h3>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Aug 24, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="algorithm.html">
-              [C++] algorithm             </a>
-          </h3>
-            <p class="Article__Desc">
-          <span class="SemanticStringArray"><span class="SemanticString">sort 可以針對array或vector進行排列</span></span>      </p>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Aug 24, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="f481.html">
-              [題解] f481            </a>
-          </h3>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Jun 17, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
-            <a href="tag/題解.html">題解</a>
-          </span>
-                  <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="stack.html">
-              [C++] stack            </a>
-          </h3>
-            <p class="Article__Desc">
-          <span class="SemanticStringArray"><span class="SemanticString">C++ stack的用法</span></span>      </p>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, May 10, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="string.html">
-              [C++] string            </a>
-          </h3>
-            <p class="Article__Desc">
-          <span class="SemanticStringArray"><span class="SemanticString">C++ string的用法</span></span>      </p>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Apr 5, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="vector.html">
-              [C++] vector            </a>
-          </h3>
-            <p class="Article__Desc">
-          <span class="SemanticStringArray"><span class="SemanticString">vector是一種長度</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">可變</strong></span><span class="SemanticString">的線性容器</span></span>      </p>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Mar 29, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-                      <article class="Article">
-      <h3 class="Article__Title">
-            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>        <a href="pointer.html">
-              [C++] 指標            </a>
-          </h3>
-            <p class="Article__Desc">
-          <span class="SemanticStringArray"><span class="SemanticString">C++ 指標的用法</span></span>      </p>
-            <div class="DateTagBar">
-                  <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Mar 22, 2021</span>
-                            <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
-          </span>
-                  </div>
-    </article>
-              </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="random_seat.html">
+        [進階程設] 隨機座位
+      </a>
+    </h3>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Oct 7, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
+          <a href="tag/進階程設課程.html">進階程設課程</a>
+        </span>
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="lottery.html">
+        [進階程設] 大樂透抽獎
+      </a>
+    </h3>
+    
+      <p class="Article__Desc">
+        <span class="SemanticStringArray"><span class="SemanticString">樂透抽獎的不同解法</span></span>
+      </p>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Oct 7, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
+          <a href="tag/進階程設課程.html">進階程設課程</a>
+        </span>
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="C++_basic.html">
+        [進階程設] C++基礎
+      </a>
+    </h3>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Sep 23, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
+          <a href="tag/進階程設課程.html">進階程設課程</a>
+        </span>
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="a227.html">
+        [題解] a227 三龍杯 -&gt; 河內之塔
+      </a>
+    </h3>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Sun, Aug 29, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
+          <a href="tag/題解.html">題解</a>
+        </span>
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="struct.html">
+        [C++] struct
+      </a>
+    </h3>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Aug 24, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="algorithm.html">
+        [C++] algorithm 
+      </a>
+    </h3>
+    
+      <p class="Article__Desc">
+        <span class="SemanticStringArray"><span class="SemanticString">sort 可以針對array或vector進行排列</span></span>
+      </p>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Aug 24, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="f481.html">
+        [題解] f481
+      </a>
+    </h3>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Jun 17, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
+          <a href="tag/題解.html">題解</a>
+        </span>
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="stack.html">
+        [C++] stack
+      </a>
+    </h3>
+    
+      <p class="Article__Desc">
+        <span class="SemanticStringArray"><span class="SemanticString">C++ stack的用法</span></span>
+      </p>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, May 10, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="string.html">
+        [C++] string
+      </a>
+    </h3>
+    
+      <p class="Article__Desc">
+        <span class="SemanticStringArray"><span class="SemanticString">C++ string的用法</span></span>
+      </p>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Apr 5, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="vector.html">
+        [C++] vector
+      </a>
+    </h3>
+    
+      <p class="Article__Desc">
+        <span class="SemanticStringArray"><span class="SemanticString">vector是一種長度</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">可變</strong></span><span class="SemanticString">的線性容器</span></span>
+      </p>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Mar 29, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+  <article class="Article">
+    <h3 class="Article__Title">
+      
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      
+      <a href="pointer.html">
+        [C++] 指標
+      </a>
+    </h3>
+    
+      <p class="Article__Desc">
+        <span class="SemanticStringArray"><span class="SemanticString">C++ 指標的用法</span></span>
+      </p>
+    
+    <div class="DateTagBar">
+      
+        <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, Mar 22, 2021</span>
+      
+      
+        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+          <a href="tag/C++.html">C++</a>
+        </span>
+      
+    </div>
+  </article>
+
+</article>
   <footer class="Footer">
-        <div>&copy; Alan's blog 2019</div>
-        <div>&centerdot;</div>
-        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
-            rel="noopener noreferrer">Notablog</a>.
-        </div>
-    </footer>
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
 </body>
 
 </html>

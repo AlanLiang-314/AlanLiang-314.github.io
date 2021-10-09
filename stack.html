@@ -2,31 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
-  <meta name="theme-color" content="#FFFFFF">
-  <meta property="og:title" content="[C++] stack">
-    <meta name="description" content="C++ stack的用法">
-  <meta property="og:description" content="C++ stack的用法">
-    <meta property="og:type" content="blog">
-  <title>[C++] stack</title>
-  <!-- Favicon -->
-    <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
-  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
-  <link rel="stylesheet" type="text/css" href="css/notablog.css">
-  <link rel="stylesheet" type="text/css" href="css/theme.css">
-  <style>
-    :root {
-      font-size: 18px;
-    }
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152513368-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
+  gtag('config', 'UA-152513368-1');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>[C++] stack&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="[C++] stack">
+  
+    <meta name="description" content="C++ stack的用法">
+    <meta property="og:description" content="C++ stack的用法">
+  
+  
+    <meta property="og:image" content="https://img.icons8.com/windows/256/000000/rss-logo.png">
+  
+  <style>
     .DateTagBar {
       margin-top: 1.0rem;
     }
@@ -35,46 +52,128 @@
 
 <body>
   <nav class="Navbar">
-    <a href="index.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span> <span>Home</span></div>
-    </a>
-                                                                                                                    <span class="Navbar__Delim">&centerdot;</span>
-    <a href="certification.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span> <span>檢定成績</span></div>
-    </a>
-                        <span class="Navbar__Delim">&centerdot;</span>
-    <a href="dashboard.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span> <span>儀表板</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="C++_notes.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span> <span>C++筆記</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="about.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span> <span>關於</span></div>
-    </a>
-          </nav>
-  <header class="Header">
-          <div class="Header__Spacer Header__Spacer--NoCover">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
     </div>
-        <div class="Header__Icon"><span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span></div>
-        <h1 class="Header__Title">[C++] stack</h1>
-            <div class="DateTagBar">
-                <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, May 10, 2021</span>
-                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span>&nbsp;
+          
+          <span>儀表板</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+      <div class="Header__Icon">
+        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
+      </div>
+    
+    <h1 class="Header__Title">[C++] stack</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Mon, May 10, 2021</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
             <a href="tag/C++.html">C++</a>
           </span>
-                  </div>
-          </header>
-      <article id="https://www.notion.so/1fbfc086a7c1459ca0ebd8f99e651ae1" class="PageRoot"><blockquote id="https://www.notion.so/037cba5b39c34e40adfc46fddc2011c7" class="ColorfulBlock ColorfulBlock--ColorDefault Quote"><span class="SemanticStringArray"><span class="SemanticString">實作日期：20210510</span></span></blockquote><h2 id="https://www.notion.so/6b3c276a4af54ddd8e775c3d0787e606" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/6b3c276a4af54ddd8e775c3d0787e606"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">宣告</span></span></h2><div id="https://www.notion.so/1e889ad9116c40b9b89235c0aca0f7f3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">#include &lt;stack&gt;</code></span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">stack&lt;int&gt; s1,s2</code></span><span class="SemanticString">
-可以一次宣告多個(就像一般變數一樣是物件)</span></span></p></div><h2 id="https://www.notion.so/70105997509b49ce8c2c20af783fcbaa" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/70105997509b49ce8c2c20af783fcbaa"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">物件方法</span></span></h2><ul class="BulletedListWrapper"><li id="https://www.notion.so/3cf949ba949a4baaa8e37e0be90c2fec" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.empty</code></span><span class="SemanticString">檢查是否為空值</span></span></li><li id="https://www.notion.so/c147d5ee095b476eb31aeaa726fdcc06" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.push</code></span><span class="SemanticString">從最末端加入元素</span></span></li><li id="https://www.notion.so/24243206209b4c80a2084f1b0bfa963c" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.pop</code></span><span class="SemanticString">從最末端彈出元素，</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">不會回傳值</strong></span></span></li><li id="https://www.notion.so/d5779b6a6a7c4bdf81ebf5d03ad9a701" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.size</code></span><span class="SemanticString">取得s的大小</span></span></li><li id="https://www.notion.so/075c3d45314644769c8dd1a113faddff" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.empty</code></span><span class="SemanticString">清空堆疊</span></span></li></ul><div id="https://www.notion.so/89d663855dbb4ed986a4d2dcb08ddb8d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">用[[vector]]好像可以完全取代</span></span></p></div></article>  <footer class="Footer">
-        <div>&copy; Alan's blog 2019</div>
-        <div>&centerdot;</div>
-        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
-            rel="noopener noreferrer">Notablog</a>.
-        </div>
-    </footer>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/1fbfc086a7c1459ca0ebd8f99e651ae1" class="PageRoot"><blockquote id="https://www.notion.so/037cba5b39c34e40adfc46fddc2011c7" class="ColorfulBlock ColorfulBlock--ColorDefault Quote"><span class="SemanticStringArray"><span class="SemanticString">實作日期：20210510</span></span></blockquote><h2 id="https://www.notion.so/6b3c276a4af54ddd8e775c3d0787e606" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/6b3c276a4af54ddd8e775c3d0787e606"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">宣告</span></span></h2><div id="https://www.notion.so/1e889ad9116c40b9b89235c0aca0f7f3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">#include &lt;stack&gt;</code></span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">stack&lt;int&gt; s1,s2</code></span><span class="SemanticString">
+可以一次宣告多個(就像一般變數一樣是物件)</span></span></p></div><h2 id="https://www.notion.so/70105997509b49ce8c2c20af783fcbaa" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/70105997509b49ce8c2c20af783fcbaa"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">物件方法</span></span></h2><ul class="BulletedListWrapper"><li id="https://www.notion.so/3cf949ba949a4baaa8e37e0be90c2fec" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.empty</code></span><span class="SemanticString">檢查是否為空值</span></span></li><li id="https://www.notion.so/c147d5ee095b476eb31aeaa726fdcc06" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.push</code></span><span class="SemanticString">從最末端加入元素</span></span></li><li id="https://www.notion.so/24243206209b4c80a2084f1b0bfa963c" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.pop</code></span><span class="SemanticString">從最末端彈出元素，</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">不會回傳值</strong></span></span></li><li id="https://www.notion.so/d5779b6a6a7c4bdf81ebf5d03ad9a701" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.size</code></span><span class="SemanticString">取得s的大小</span></span></li><li id="https://www.notion.so/075c3d45314644769c8dd1a113faddff" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">s.empty</code></span><span class="SemanticString">清空堆疊</span></span></li></ul><div id="https://www.notion.so/89d663855dbb4ed986a4d2dcb08ddb8d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">用[[vector]]好像可以完全取代</span></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
 </body>
 
 </html>

@@ -2,31 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
-  <meta name="theme-color" content="#FFFFFF">
-  <meta property="og:title" content="反彈膠囊演示">
-    <meta name="description" content="vpython動態模擬反彈膠囊">
-  <meta property="og:description" content="vpython動態模擬反彈膠囊">
-    <meta property="og:type" content="blog">
-  <title>反彈膠囊演示</title>
-  <!-- Favicon -->
-    <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
-  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
-  <link rel="stylesheet" type="text/css" href="css/notablog.css">
-  <link rel="stylesheet" type="text/css" href="css/theme.css">
-  <style>
-    :root {
-      font-size: 18px;
-    }
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152513368-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
+  gtag('config', 'UA-152513368-1');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>反彈膠囊演示&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="反彈膠囊演示">
+  
+    <meta name="description" content="vpython動態模擬反彈膠囊">
+    <meta property="og:description" content="vpython動態模擬反彈膠囊">
+  
+  
+    <meta property="og:image" content="https://img.icons8.com/ios-filled/100/000000/capsule.png">
+  
+  <style>
     .DateTagBar {
       margin-top: 1.0rem;
     }
@@ -35,45 +52,127 @@
 
 <body>
   <nav class="Navbar">
-    <a href="index.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span> <span>Home</span></div>
-    </a>
-                                                                                                                    <span class="Navbar__Delim">&centerdot;</span>
-    <a href="certification.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span> <span>檢定成績</span></div>
-    </a>
-                        <span class="Navbar__Delim">&centerdot;</span>
-    <a href="dashboard.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span> <span>儀表板</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="C++_notes.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span> <span>C++筆記</span></div>
-    </a>
-                <span class="Navbar__Delim">&centerdot;</span>
-    <a href="about.html">
-      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span> <span>關於</span></div>
-    </a>
-          </nav>
-  <header class="Header">
-          <div class="Header__Spacer Header__Spacer--NoCover">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
     </div>
-        <div class="Header__Icon"><span><img class="inline-img-icon" src="https://img.icons8.com/ios-filled/100/000000/capsule.png"></span></div>
-        <h1 class="Header__Title">反彈膠囊演示</h1>
-            <div class="DateTagBar">
-                <span class="DateTagBar__Item DateTagBar__Date">Posted on Sat, Sep 25, 2021</span>
-                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--green">
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span>&nbsp;
+          
+          <span>儀表板</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+      <div class="Header__Icon">
+        <span><img class="inline-img-icon" src="https://img.icons8.com/ios-filled/100/000000/capsule.png"></span>
+      </div>
+    
+    <h1 class="Header__Title">反彈膠囊演示</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Sat, Sep 25, 2021</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--green">
             <a href="tag/python.html">python</a>
           </span>
-                  </div>
-          </header>
-      <article id="https://www.notion.so/01689f24b2f24f68884491459f075154" class="PageRoot PageRoot--FullWidth"><div id="https://www.notion.so/c6c30b7b40c348f7b428dc6ddf166b12" class="Embed"><div class="Embed__Content"><div class="Embed__ResponsiveContainer" style="width:100%;height:870.2000122070312px"><iframe src="https://alanliang-314.github.io/html-widgets/" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" allowfullscreen=""></iframe></div></div><p class="Embed__Caption"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/ab59384608a94bcdab23eef46c94f064" class="Bookmark"><a href="https://www.glowscript.org/#/user/alanliang314159/folder/MyPrograms/program/vpython2"><h5 class="Bookmark__Title">GlowScript IDE</h5><p class="Bookmark__Desc">GlowScript is an easy-to-use, powerful environment for creating 3D animations and publishing them on the web. Here at glowscript.org, you can write and run GlowScript programs right in your browser, store them in the cloud for free, and easily share them with others. The Help provides full documentation.</p><p class="Bookmark__Link">https://www.glowscript.org/#/user/alanliang314159/folder/MyPrograms/program/vpython2</p></a></div><div id="https://www.notion.so/342d2693684647d18c2d53aa18fcbf4b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>  <footer class="Footer">
-        <div>&copy; Alan's blog 2019</div>
-        <div>&centerdot;</div>
-        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
-            rel="noopener noreferrer">Notablog</a>.
-        </div>
-    </footer>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/01689f24b2f24f68884491459f075154" class="PageRoot PageRoot--FullWidth"><div id="https://www.notion.so/c6c30b7b40c348f7b428dc6ddf166b12" class="Embed"><div class="Embed__Content"><div class="Embed__ResponsiveContainer" style="width:100%;height:870.2000122070312px"><iframe src="https://alanliang-314.github.io/html-widgets/" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" allowfullscreen=""></iframe></div></div><p class="Embed__Caption"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/ab59384608a94bcdab23eef46c94f064" class="Bookmark"><a href="https://www.glowscript.org/#/user/alanliang314159/folder/MyPrograms/program/vpython2"><h5 class="Bookmark__Title">GlowScript IDE</h5><p class="Bookmark__Desc">GlowScript is an easy-to-use, powerful environment for creating 3D animations and publishing them on the web. Here at glowscript.org, you can write and run GlowScript programs right in your browser, store them in the cloud for free, and easily share them with others. The Help provides full documentation.</p><p class="Bookmark__Link">https://www.glowscript.org/#/user/alanliang314159/folder/MyPrograms/program/vpython2</p></a></div><div id="https://www.notion.so/342d2693684647d18c2d53aa18fcbf4b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
 </body>
 
 </html>
