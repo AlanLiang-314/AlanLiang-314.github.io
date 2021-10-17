@@ -92,6 +92,14 @@
     
   
     
+  
+    
+  
+    
+  
+    
+  
+    
       <span class="Navbar__Delim">&centerdot;</span>
       <a href="certification.html">
         <div class="Navbar__Btn">
@@ -169,7 +177,7 @@
       </div>
     
   </header>
-  <article id="https://www.notion.so/f11c0875a9b94de2a40e6e1416721882" class="PageRoot"><div id="https://www.notion.so/d131b9573093401abc05139dd9b4fe26" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第一種：檢查是否抽過</span></span></p></div><div id="https://www.notion.so/c8243daff95e443682841c946d9c8479" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第二種：標記已抽過號碼</span></span></p></div><pre id="https://www.notion.so/95e221c697f140b5a1f8ec430e55da8f" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+  <article id="https://www.notion.so/f11c0875a9b94de2a40e6e1416721882" class="PageRoot"><blockquote id="https://www.notion.so/a58596ddb22f4a5f81454a75f5f03e01" class="ColorfulBlock ColorfulBlock--ColorDefault Quote"><span class="SemanticStringArray"><span class="SemanticString">2021-10-14更新</span></span></blockquote><div id="https://www.notion.so/088e877c886343a18e3a4c3606455c62" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第一種：檢查是否抽過</span></span></p></div><div id="https://www.notion.so/c8243daff95e443682841c946d9c8479" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第二種：標記已抽過號碼</span></span></p></div><pre id="https://www.notion.so/95e221c697f140b5a1f8ec430e55da8f" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ctime></span></span>
 
@@ -192,7 +200,24 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/19290bbdb8cc456ca49b688bf4c29ae3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第三種：動態陣列</span></span></p></div><div id="https://www.notion.so/c72bcca9520747a4b3f761a0a7521f25" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第四種：打亂陣列</span></span></p></div><pre id="https://www.notion.so/5368ad9dd7c94435a7c0db1b1c2e8d9b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/19290bbdb8cc456ca49b688bf4c29ae3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第三種：動態陣列</span></span></p></div><pre id="https://www.notion.so/20b7b54ca4204a5885c364a0f567fb33" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">srand</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> v<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> temp<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">42</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> v<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">6</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        temp<span class="token operator">=</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">%</span>v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout<span class="token operator">&lt;&lt;</span>v<span class="token punctuation">[</span>temp<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        v<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/c72bcca9520747a4b3f761a0a7521f25" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">第四種：打亂陣列</span></span></p></div><pre id="https://www.notion.so/5368ad9dd7c94435a7c0db1b1c2e8d9b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ctime></span></span>
 
@@ -225,7 +250,7 @@
     <span class="token function">random_shuffle</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>v<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">6</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> cout<span class="token operator">&lt;&lt;</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></span></span></span></code></pre></article>
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/5f60ed0d044a4e81a5f39b74c39c8042" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">我覺得第五種是最好的，因為速度還不錯，程式碼也很短。</span></span></p></div></article>
   <footer class="Footer">
   <div>&copy; Alan&#39;s blog 2019-2021</div>
   <div>&centerdot;</div>
