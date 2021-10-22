@@ -33,9 +33,9 @@
     font-size: 20px;
   }
 </style>
-  <title>考拉茲猜想路徑長&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <title>[題解] 考拉茲猜想路徑長&nbsp;|&nbsp;Alan&#39;s blog</title>
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="考拉茲猜想路徑長">
+  <meta property="og:title" content="[題解] 考拉茲猜想路徑長">
   
   
   <style>
@@ -55,6 +55,8 @@
       <span>Home</span>
     </div>
   </a>
+  
+    
   
     
   
@@ -150,7 +152,7 @@
     <div class="Header__Spacer Header__Spacer--NoCover">
     </div>
     
-    <h1 class="Header__Title">考拉茲猜想路徑長</h1>
+    <h1 class="Header__Title">[題解] 考拉茲猜想路徑長</h1>
     
       <div class="DateTagBar">
         
@@ -168,16 +170,16 @@
       </div>
     
   </header>
-  <article id="https://www.notion.so/b129accb159c414fbecc99bad71a73f1" class="PageRoot"><div id="https://www.notion.so/6505de2b46d846cd9036c2248bd24bdb" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">暴搜</span></span></p></div><pre id="https://www.notion.so/3c0492b07db44dfdb0938279e83c1138" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+  <article id="https://www.notion.so/b129accb159c414fbecc99bad71a73f1" class="PageRoot"><div id="https://www.notion.so/6505de2b46d846cd9036c2248bd24bdb" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">解法一：暴搜</span></span></p></div><div id="https://www.notion.so/4a1407c26a91482f9c437480ac228d37" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">直接計算一億以內正整數的路徑長，能保證路徑長23內的答案都正確</span></span></p></div><pre id="https://www.notion.so/3c0492b07db44dfdb0938279e83c1138" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
 <span class="token keyword">int</span> dp<span class="token punctuation">[</span><span class="token number">200000</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">int</span> a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">int</span> ans<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>a<span class="token operator">></span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>a<span class="token operator">></span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>ans<span class="token operator">&lt;=</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token operator">%</span><span class="token number">2</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             a<span class="token operator">=</span>a<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
             ans<span class="token operator">++</span><span class="token punctuation">;</span>
@@ -186,16 +188,20 @@
             ans<span class="token operator">++</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ans<span class="token operator">&lt;=</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10000000</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        a<span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dp<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">100000000</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        a<span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> dp<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">150</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">64</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         cout<span class="token operator">&lt;&lt;</span>i<span class="token operator">&lt;&lt;</span><span class="token string">": "</span><span class="token operator">&lt;&lt;</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
@@ -224,133 +230,48 @@
 <span class="token number">22</span><span class="token operator">:</span> <span class="token number">91</span>
 <span class="token number">23</span><span class="token operator">:</span> <span class="token number">113</span>
 <span class="token number">24</span><span class="token operator">:</span> <span class="token number">143</span>
-<span class="token number">25</span><span class="token operator">:</span> <span class="token number">178</span>
-<span class="token number">26</span><span class="token operator">:</span> <span class="token number">226</span>
-<span class="token number">27</span><span class="token operator">:</span> <span class="token number">275</span>
-<span class="token number">28</span><span class="token operator">:</span> <span class="token number">353</span>
-<span class="token number">29</span><span class="token operator">:</span> <span class="token number">447</span>
-<span class="token number">30</span><span class="token operator">:</span> <span class="token number">516</span>
-<span class="token number">31</span><span class="token operator">:</span> <span class="token number">666</span>
-<span class="token number">32</span><span class="token operator">:</span> <span class="token number">854</span>
-<span class="token number">33</span><span class="token operator">:</span> <span class="token number">946</span>
-<span class="token number">34</span><span class="token operator">:</span> <span class="token number">1236</span>
-<span class="token number">35</span><span class="token operator">:</span> <span class="token number">1257</span>
-<span class="token number">36</span><span class="token operator">:</span> <span class="token number">1660</span>
-<span class="token number">37</span><span class="token operator">:</span> <span class="token number">2192</span>
-<span class="token number">38</span><span class="token operator">:</span> <span class="token number">2098</span>
-<span class="token number">39</span><span class="token operator">:</span> <span class="token number">2840</span>
-<span class="token number">40</span><span class="token operator">:</span> <span class="token number">2501</span>
-<span class="token number">41</span><span class="token operator">:</span> <span class="token number">3423</span>
-<span class="token number">42</span><span class="token operator">:</span> <span class="token number">4682</span>
-<span class="token number">43</span><span class="token operator">:</span> <span class="token number">3894</span>
-<span class="token number">44</span><span class="token operator">:</span> <span class="token number">5460</span>
-<span class="token number">45</span><span class="token operator">:</span> <span class="token number">6160</span>
-<span class="token number">46</span><span class="token operator">:</span> <span class="token number">5983</span>
-<span class="token number">47</span><span class="token operator">:</span> <span class="token number">8491</span>
-<span class="token number">48</span><span class="token operator">:</span> <span class="token number">6204</span>
-<span class="token number">49</span><span class="token operator">:</span> <span class="token number">9039</span>
-<span class="token number">50</span><span class="token operator">:</span> <span class="token number">13057</span>
-<span class="token number">51</span><span class="token operator">:</span> <span class="token number">9142</span>
-<span class="token number">52</span><span class="token operator">:</span> <span class="token number">13489</span>
-<span class="token number">53</span><span class="token operator">:</span> <span class="token number">8725</span>
-<span class="token number">54</span><span class="token operator">:</span> <span class="token number">13223</span>
-<span class="token number">55</span><span class="token operator">:</span> <span class="token number">19776</span>
-<span class="token number">56</span><span class="token operator">:</span> <span class="token number">12316</span>
-<span class="token number">57</span><span class="token operator">:</span> <span class="token number">18910</span>
-<span class="token number">58</span><span class="token operator">:</span> <span class="token number">18890</span>
-<span class="token number">59</span><span class="token operator">:</span> <span class="token number">17289</span>
-<span class="token number">60</span><span class="token operator">:</span> <span class="token number">26808</span>
-<span class="token number">61</span><span class="token operator">:</span> <span class="token number">15104</span>
-<span class="token number">62</span><span class="token operator">:</span> <span class="token number">24076</span>
-<span class="token number">63</span><span class="token operator">:</span> <span class="token number">37855</span>
-<span class="token number">64</span><span class="token operator">:</span> <span class="token number">20767</span>
-<span class="token number">65</span><span class="token operator">:</span> <span class="token number">33364</span>
-<span class="token number">66</span><span class="token operator">:</span> <span class="token number">17201</span>
-<span class="token number">67</span><span class="token operator">:</span> <span class="token number">28357</span>
-<span class="token number">68</span><span class="token operator">:</span> <span class="token number">45994</span>
-<span class="token number">69</span><span class="token operator">:</span> <span class="token number">23194</span>
-<span class="token number">70</span><span class="token operator">:</span> <span class="token number">38572</span>
-<span class="token number">71</span><span class="token operator">:</span> <span class="token number">35789</span>
-<span class="token number">72</span><span class="token operator">:</span> <span class="token number">31302</span>
-<span class="token number">73</span><span class="token operator">:</span> <span class="token number">52263</span>
-<span class="token number">74</span><span class="token operator">:</span> <span class="token number">24457</span>
-<span class="token number">75</span><span class="token operator">:</span> <span class="token number">41905</span>
-<span class="token number">76</span><span class="token operator">:</span> <span class="token number">61020</span>
-<span class="token number">77</span><span class="token operator">:</span> <span class="token number">32581</span>
-<span class="token number">78</span><span class="token operator">:</span> <span class="token number">56121</span>
-<span class="token number">79</span><span class="token operator">:</span> <span class="token number">24568</span>
-<span class="token number">80</span><span class="token operator">:</span> <span class="token number">43328</span>
-<span class="token number">81</span><span class="token operator">:</span> <span class="token number">75101</span>
-<span class="token number">82</span><span class="token operator">:</span> <span class="token number">32442</span>
-<span class="token number">83</span><span class="token operator">:</span> <span class="token number">57416</span>
-<span class="token number">84</span><span class="token operator">:</span> <span class="token number">32059</span>
-<span class="token number">85</span><span class="token operator">:</span> <span class="token number">42867</span>
-<span class="token number">86</span><span class="token operator">:</span> <span class="token number">76263</span>
-<span class="token number">87</span><span class="token operator">:</span> <span class="token number">31212</span>
-<span class="token number">88</span><span class="token operator">:</span> <span class="token number">56695</span>
-<span class="token number">89</span><span class="token operator">:</span> <span class="token number">83708</span>
-<span class="token number">90</span><span class="token operator">:</span> <span class="token number">41041</span>
-<span class="token number">91</span><span class="token operator">:</span> <span class="token number">74803</span>
-<span class="token number">92</span><span class="token operator">:</span> <span class="token number">29161</span>
-<span class="token number">93</span><span class="token operator">:</span> <span class="token number">54019</span>
-<span class="token number">94</span><span class="token operator">:</span> <span class="token number">98828</span>
-<span class="token number">95</span><span class="token operator">:</span> <span class="token number">38063</span>
-<span class="token number">96</span><span class="token operator">:</span> <span class="token number">71007</span>
-<span class="token number">97</span><span class="token operator">:</span> <span class="token number">26317</span>
-<span class="token number">98</span><span class="token operator">:</span> <span class="token number">50079</span>
-<span class="token number">99</span><span class="token operator">:</span> <span class="token number">93662</span>
-<span class="token number">100</span><span class="token operator">:</span> <span class="token number">34427</span>
-<span class="token number">101</span><span class="token operator">:</span> <span class="token number">65592</span>
-<span class="token number">102</span><span class="token operator">:</span> <span class="token number">84468</span>
-<span class="token number">103</span><span class="token operator">:</span> <span class="token number">45182</span>
-<span class="token number">104</span><span class="token operator">:</span> <span class="token number">86195</span>
-<span class="token number">105</span><span class="token operator">:</span> <span class="token number">30585</span>
-<span class="token number">106</span><span class="token operator">:</span> <span class="token number">59297</span>
-<span class="token number">107</span><span class="token operator">:</span> <span class="token number">102316</span>
-<span class="token number">108</span><span class="token operator">:</span> <span class="token number">40179</span>
-<span class="token number">109</span><span class="token operator">:</span> <span class="token number">77944</span>
-<span class="token number">110</span><span class="token operator">:</span> <span class="token number">26725</span>
-<span class="token number">111</span><span class="token operator">:</span> <span class="token number">52746</span>
-<span class="token number">112</span><span class="token operator">:</span> <span class="token number">102387</span>
-<span class="token number">113</span><span class="token operator">:</span> <span class="token number">35180</span>
-<span class="token number">114</span><span class="token operator">:</span> <span class="token number">69305</span>
-<span class="token number">115</span><span class="token operator">:</span> <span class="token number">58058</span>
-<span class="token number">116</span><span class="token operator">:</span> <span class="token number">46168</span>
-<span class="token number">117</span><span class="token operator">:</span> <span class="token number">91186</span>
-<span class="token number">118</span><span class="token operator">:</span> <span class="token number">30412</span>
-<span class="token number">119</span><span class="token operator">:</span> <span class="token number">60871</span>
-<span class="token number">120</span><span class="token operator">:</span> <span class="token number">108812</span>
-<span class="token number">121</span><span class="token operator">:</span> <span class="token number">40213</span>
-<span class="token number">122</span><span class="token operator">:</span> <span class="token number">80246</span>
-<span class="token number">123</span><span class="token operator">:</span> <span class="token number">26237</span>
-<span class="token number">124</span><span class="token operator">:</span> <span class="token number">52894</span>
-<span class="token number">125</span><span class="token operator">:</span> <span class="token number">105753</span>
-<span class="token number">126</span><span class="token operator">:</span> <span class="token number">34714</span>
-<span class="token number">127</span><span class="token operator">:</span> <span class="token number">70008</span>
-<span class="token number">128</span><span class="token operator">:</span> <span class="token number">22587</span>
-<span class="token number">129</span><span class="token operator">:</span> <span class="token number">45843</span>
-<span class="token number">130</span><span class="token operator">:</span> <span class="token number">92295</span>
-<span class="token number">131</span><span class="token operator">:</span> <span class="token number">29941</span>
-<span class="token number">132</span><span class="token operator">:</span> <span class="token number">60685</span>
-<span class="token number">133</span><span class="token operator">:</span> <span class="token number">85957</span>
-<span class="token number">134</span><span class="token operator">:</span> <span class="token number">39760</span>
-<span class="token number">135</span><span class="token operator">:</span> <span class="token number">80393</span>
-<span class="token number">136</span><span class="token operator">:</span> <span class="token number">26102</span>
-<span class="token number">137</span><span class="token operator">:</span> <span class="token number">52923</span>
-<span class="token number">138</span><span class="token operator">:</span> <span class="token number">104377</span>
-<span class="token number">139</span><span class="token operator">:</span> <span class="token number">34878</span>
-<span class="token number">140</span><span class="token operator">:</span> <span class="token number">70470</span>
-<span class="token number">141</span><span class="token operator">:</span> <span class="token number">23072</span>
-<span class="token number">142</span><span class="token operator">:</span> <span class="token number">46651</span>
-<span class="token number">143</span><span class="token operator">:</span> <span class="token number">93945</span>
-<span class="token number">144</span><span class="token operator">:</span> <span class="token number">30928</span>
-<span class="token number">145</span><span class="token operator">:</span> <span class="token number">62173</span>
-<span class="token number">146</span><span class="token operator">:</span> <span class="token number">70388</span>
-<span class="token number">147</span><span class="token operator">:</span> <span class="token number">41090</span>
-<span class="token number">148</span><span class="token operator">:</span> <span class="token number">82776</span>
-<span class="token number">149</span><span class="token operator">:</span> <span class="token number">27251</span>
+<span class="token number">25</span><span class="token operator">:</span> <span class="token number">179</span>
+<span class="token number">26</span><span class="token operator">:</span> <span class="token number">227</span>
+<span class="token number">27</span><span class="token operator">:</span> <span class="token number">287</span>
+<span class="token number">28</span><span class="token operator">:</span> <span class="token number">365</span>
+<span class="token number">29</span><span class="token operator">:</span> <span class="token number">459</span>
+<span class="token number">30</span><span class="token operator">:</span> <span class="token number">577</span>
+<span class="token number">31</span><span class="token operator">:</span> <span class="token number">718</span>
+<span class="token number">32</span><span class="token operator">:</span> <span class="token number">911</span>
+<span class="token number">33</span><span class="token operator">:</span> <span class="token number">1098</span>
+<span class="token number">34</span><span class="token operator">:</span> <span class="token number">1407</span>
+<span class="token number">35</span><span class="token operator">:</span> <span class="token number">1793</span>
+<span class="token number">36</span><span class="token operator">:</span> <span class="token number">2061</span>
+<span class="token number">37</span><span class="token operator">:</span> <span class="token number">2656</span>
+<span class="token number">38</span><span class="token operator">:</span> <span class="token number">3071</span>
+<span class="token number">39</span><span class="token operator">:</span> <span class="token number">3778</span>
+<span class="token number">40</span><span class="token operator">:</span> <span class="token number">4917</span>
+<span class="token number">41</span><span class="token operator">:</span> <span class="token number">5045</span>
+<span class="token number">42</span><span class="token operator">:</span> <span class="token number">6674</span>
+<span class="token number">43</span><span class="token operator">:</span> <span class="token number">8808</span>
+<span class="token number">44</span><span class="token operator">:</span> <span class="token number">8606</span>
+<span class="token number">45</span><span class="token operator">:</span> <span class="token number">11531</span>
+<span class="token number">46</span><span class="token operator">:</span> <span class="token number">10433</span>
+<span class="token number">47</span><span class="token operator">:</span> <span class="token number">14263</span>
+<span class="token number">48</span><span class="token operator">:</span> <span class="token number">19391</span>
+<span class="token number">49</span><span class="token operator">:</span> <span class="token number">16738</span>
+<span class="token number">50</span><span class="token operator">:</span> <span class="token number">23227</span>
+<span class="token number">51</span><span class="token operator">:</span> <span class="token number">20488</span>
+<span class="token number">52</span><span class="token operator">:</span> <span class="token number">26417</span>
+<span class="token number">53</span><span class="token operator">:</span> <span class="token number">37038</span>
+<span class="token number">54</span><span class="token operator">:</span> <span class="token number">28511</span>
+<span class="token number">55</span><span class="token operator">:</span> <span class="token number">40841</span>
+<span class="token number">56</span><span class="token operator">:</span> <span class="token number">58054</span>
+<span class="token number">57</span><span class="token operator">:</span> <span class="token number">42904</span>
+<span class="token number">58</span><span class="token operator">:</span> <span class="token number">62295</span>
+<span class="token number">59</span><span class="token operator">:</span> <span class="token number">42972</span>
+<span class="token number">60</span><span class="token operator">:</span> <span class="token number">63683</span>
+<span class="token number">61</span><span class="token operator">:</span> <span class="token number">93517</span>
+<span class="token number">62</span><span class="token operator">:</span> <span class="token number">62378</span>
+<span class="token number">63</span><span class="token operator">:</span> <span class="token number">93572</span>
+<span class="token number">64</span><span class="token operator">:</span> <span class="token number">71605</span>
 
-Process returned <span class="token number">0</span> <span class="token punctuation">(</span><span class="token number">0x0</span><span class="token punctuation">)</span>   execution time <span class="token operator">:</span> <span class="token number">5.263</span> s
+Process returned <span class="token number">0</span> <span class="token punctuation">(</span><span class="token number">0x0</span><span class="token punctuation">)</span>   execution time <span class="token operator">:</span> <span class="token number">26.438</span> s
 Press ENTER to <span class="token keyword">continue</span><span class="token punctuation">.</span></span></span></span></code></pre><div id="https://www.notion.so/2bbac52d5f2845409860db7d8b047410" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">dp</span></span></p></div><pre id="https://www.notion.so/bc608ea662dc4d868dfc97f99afdc77b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
 
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
@@ -359,7 +280,7 @@ Press ENTER to <span class="token keyword">continue</span><span class="token pun
 
 <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token operator">&lt;</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>a<span class="token operator">%</span><span class="token number">2</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token comment">//dp[b]++;</span>
             <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">,</span>b<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
@@ -372,7 +293,6 @@ Press ENTER to <span class="token keyword">continue</span><span class="token pun
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-
     dp<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
     dp<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
     dp<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
@@ -380,7 +300,8 @@ Press ENTER to <span class="token keyword">continue</span><span class="token pun
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">64</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> cout<span class="token operator">&lt;&lt;</span>i<span class="token operator">&lt;&lt;</span><span class="token string">": "</span><span class="token operator">&lt;&lt;</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     <span class="token comment">//for(int i=0;i&lt;64;i++) cout&lt;&lt;dp[i]&lt;&lt;", ";</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></span></span></span></code></pre><pre id="https://www.notion.so/180a3062b394429cbe83b3cb423c808e" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token number">1</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span></span></span></span></code></pre><pre id="https://www.notion.so/180a3062b394429cbe83b3cb423c808e" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token number">0</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token number">1</span><span class="token operator">:</span> <span class="token number">1</span>
 <span class="token number">2</span><span class="token operator">:</span> <span class="token number">1</span>
 <span class="token number">3</span><span class="token operator">:</span> <span class="token number">1</span>
 <span class="token number">4</span><span class="token operator">:</span> <span class="token number">1</span>
@@ -390,59 +311,62 @@ Press ENTER to <span class="token keyword">continue</span><span class="token pun
 <span class="token number">8</span><span class="token operator">:</span> <span class="token number">4</span>
 <span class="token number">9</span><span class="token operator">:</span> <span class="token number">4</span>
 <span class="token number">10</span><span class="token operator">:</span> <span class="token number">6</span>
-<span class="token number">11</span><span class="token operator">:</span> <span class="token number">8</span>
-<span class="token number">12</span><span class="token operator">:</span> <span class="token number">12</span>
-<span class="token number">13</span><span class="token operator">:</span> <span class="token number">15</span>
-<span class="token number">14</span><span class="token operator">:</span> <span class="token number">21</span>
-<span class="token number">15</span><span class="token operator">:</span> <span class="token number">27</span>
-<span class="token number">16</span><span class="token operator">:</span> <span class="token number">37</span>
-<span class="token number">17</span><span class="token operator">:</span> <span class="token number">47</span>
-<span class="token number">18</span><span class="token operator">:</span> <span class="token number">64</span>
-<span class="token number">19</span><span class="token operator">:</span> <span class="token number">86</span>
-<span class="token number">20</span><span class="token operator">:</span> <span class="token number">112</span>
-<span class="token number">21</span><span class="token operator">:</span> <span class="token number">151</span>
-<span class="token number">22</span><span class="token operator">:</span> <span class="token number">201</span>
-<span class="token number">23</span><span class="token operator">:</span> <span class="token number">267</span>
-<span class="token number">24</span><span class="token operator">:</span> <span class="token number">356</span>
-<span class="token number">25</span><span class="token operator">:</span> <span class="token number">474</span>
-<span class="token number">26</span><span class="token operator">:</span> <span class="token number">629</span>
-<span class="token number">27</span><span class="token operator">:</span> <span class="token number">841</span>
-<span class="token number">28</span><span class="token operator">:</span> <span class="token number">1112</span>
-<span class="token number">29</span><span class="token operator">:</span> <span class="token number">1481</span>
-<span class="token number">30</span><span class="token operator">:</span> <span class="token number">1973</span>
-<span class="token number">31</span><span class="token operator">:</span> <span class="token number">2624</span>
-<span class="token number">32</span><span class="token operator">:</span> <span class="token number">3490</span>
-<span class="token number">33</span><span class="token operator">:</span> <span class="token number">4655</span>
-<span class="token number">34</span><span class="token operator">:</span> <span class="token number">6197</span>
-<span class="token number">35</span><span class="token operator">:</span> <span class="token number">8259</span>
-<span class="token number">36</span><span class="token operator">:</span> <span class="token number">11008</span>
-<span class="token number">37</span><span class="token operator">:</span> <span class="token number">14640</span>
-<span class="token number">38</span><span class="token operator">:</span> <span class="token number">19581</span>
-<span class="token number">39</span><span class="token operator">:</span> <span class="token number">26056</span>
-<span class="token number">40</span><span class="token operator">:</span> <span class="token number">34731</span>
-<span class="token number">41</span><span class="token operator">:</span> <span class="token number">46294</span>
-<span class="token number">42</span><span class="token operator">:</span> <span class="token number">61759</span>
-<span class="token number">43</span><span class="token operator">:</span> <span class="token number">82187</span>
-<span class="token number">44</span><span class="token operator">:</span> <span class="token number">109672</span>
-<span class="token number">45</span><span class="token operator">:</span> <span class="token number">146086</span>
-<span class="token number">46</span><span class="token operator">:</span> <span class="token number">194631</span>
-<span class="token number">47</span><span class="token operator">:</span> <span class="token number">259679</span>
-<span class="token number">48</span><span class="token operator">:</span> <span class="token number">345928</span>
-<span class="token number">49</span><span class="token operator">:</span> <span class="token number">461156</span>
-<span class="token number">50</span><span class="token operator">:</span> <span class="token number">614820</span>
-<span class="token number">51</span><span class="token operator">:</span> <span class="token number">819118</span>
-<span class="token number">52</span><span class="token operator">:</span> <span class="token number">1092697</span>
-<span class="token number">53</span><span class="token operator">:</span> <span class="token number">1455687</span>
-<span class="token number">54</span><span class="token operator">:</span> <span class="token number">1940618</span>
-<span class="token number">55</span><span class="token operator">:</span> <span class="token number">2587623</span>
-<span class="token number">56</span><span class="token operator">:</span> <span class="token number">3449289</span>
-<span class="token number">57</span><span class="token operator">:</span> <span class="token number">4597272</span>
-<span class="token number">58</span><span class="token operator">:</span> <span class="token number">6130145</span>
-<span class="token number">59</span><span class="token operator">:</span> <span class="token number">8170626</span>
-<span class="token number">60</span><span class="token operator">:</span> <span class="token number">10894715</span>
-<span class="token number">61</span><span class="token operator">:</span> <span class="token number">14521973</span>
-<span class="token number">62</span><span class="token operator">:</span> <span class="token number">19359658</span>
-<span class="token number">63</span><span class="token operator">:</span> <span class="token number">25812193</span></span></span></span></code></pre></article>
+<span class="token number">11</span><span class="token operator">:</span> <span class="token number">6</span>
+<span class="token number">12</span><span class="token operator">:</span> <span class="token number">8</span>
+<span class="token number">13</span><span class="token operator">:</span> <span class="token number">10</span>
+<span class="token number">14</span><span class="token operator">:</span> <span class="token number">14</span>
+<span class="token number">15</span><span class="token operator">:</span> <span class="token number">18</span>
+<span class="token number">16</span><span class="token operator">:</span> <span class="token number">24</span>
+<span class="token number">17</span><span class="token operator">:</span> <span class="token number">29</span>
+<span class="token number">18</span><span class="token operator">:</span> <span class="token number">36</span>
+<span class="token number">19</span><span class="token operator">:</span> <span class="token number">44</span>
+<span class="token number">20</span><span class="token operator">:</span> <span class="token number">58</span>
+<span class="token number">21</span><span class="token operator">:</span> <span class="token number">72</span>
+<span class="token number">22</span><span class="token operator">:</span> <span class="token number">91</span>
+<span class="token number">23</span><span class="token operator">:</span> <span class="token number">113</span>
+<span class="token number">24</span><span class="token operator">:</span> <span class="token number">143</span>
+<span class="token number">25</span><span class="token operator">:</span> <span class="token number">179</span>
+<span class="token number">26</span><span class="token operator">:</span> <span class="token number">227</span>
+<span class="token number">27</span><span class="token operator">:</span> <span class="token number">287</span>
+<span class="token number">28</span><span class="token operator">:</span> <span class="token number">366</span>
+<span class="token number">29</span><span class="token operator">:</span> <span class="token number">460</span>
+<span class="token number">30</span><span class="token operator">:</span> <span class="token number">578</span>
+<span class="token number">31</span><span class="token operator">:</span> <span class="token number">732</span>
+<span class="token number">32</span><span class="token operator">:</span> <span class="token number">926</span>
+<span class="token number">33</span><span class="token operator">:</span> <span class="token number">1174</span>
+<span class="token number">34</span><span class="token operator">:</span> <span class="token number">1489</span>
+<span class="token number">35</span><span class="token operator">:</span> <span class="token number">1879</span>
+<span class="token number">36</span><span class="token operator">:</span> <span class="token number">2365</span>
+<span class="token number">37</span><span class="token operator">:</span> <span class="token number">2988</span>
+<span class="token number">38</span><span class="token operator">:</span> <span class="token number">3780</span>
+<span class="token number">39</span><span class="token operator">:</span> <span class="token number">4788</span>
+<span class="token number">40</span><span class="token operator">:</span> <span class="token number">6049</span>
+<span class="token number">41</span><span class="token operator">:</span> <span class="token number">7628</span>
+<span class="token number">42</span><span class="token operator">:</span> <span class="token number">9635</span>
+<span class="token number">43</span><span class="token operator">:</span> <span class="token number">12190</span>
+<span class="token number">44</span><span class="token operator">:</span> <span class="token number">15409</span>
+<span class="token number">45</span><span class="token operator">:</span> <span class="token number">19452</span>
+<span class="token number">46</span><span class="token operator">:</span> <span class="token number">24561</span>
+<span class="token number">47</span><span class="token operator">:</span> <span class="token number">31025</span>
+<span class="token number">48</span><span class="token operator">:</span> <span class="token number">39229</span>
+<span class="token number">49</span><span class="token operator">:</span> <span class="token number">49580</span>
+<span class="token number">50</span><span class="token operator">:</span> <span class="token number">62680</span>
+<span class="token number">51</span><span class="token operator">:</span> <span class="token number">79255</span>
+<span class="token number">52</span><span class="token operator">:</span> <span class="token number">100144</span>
+<span class="token number">53</span><span class="token operator">:</span> <span class="token number">126542</span>
+<span class="token number">54</span><span class="token operator">:</span> <span class="token number">159930</span>
+<span class="token number">55</span><span class="token operator">:</span> <span class="token number">202085</span>
+<span class="token number">56</span><span class="token operator">:</span> <span class="token number">255455</span>
+<span class="token number">57</span><span class="token operator">:</span> <span class="token number">322869</span>
+<span class="token number">58</span><span class="token operator">:</span> <span class="token number">408002</span>
+<span class="token number">59</span><span class="token operator">:</span> <span class="token number">515542</span>
+<span class="token number">60</span><span class="token operator">:</span> <span class="token number">651407</span>
+<span class="token number">61</span><span class="token operator">:</span> <span class="token number">823238</span>
+<span class="token number">62</span><span class="token operator">:</span> <span class="token number">1040490</span>
+<span class="token number">63</span><span class="token operator">:</span> <span class="token number">1315036</span>
+
+Process returned <span class="token number">0</span> <span class="token punctuation">(</span><span class="token number">0x0</span><span class="token punctuation">)</span>   execution time <span class="token operator">:</span> <span class="token number">0.054</span> s
+Press ENTER to <span class="token keyword">continue</span><span class="token punctuation">.</span></span></span></span></code></pre><div id="https://www.notion.so/c42173191d9c4b298357b8421bb8aaf7" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
   <footer class="Footer">
   <div>&copy; Alan&#39;s blog 2019-2021</div>
   <div>&centerdot;</div>
