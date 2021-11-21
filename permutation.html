@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152513368-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152513368-1');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>排列組合&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="排列組合">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span>&nbsp;
+          
+          <span>儀表板</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">排列組合</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Nov 11, 2021</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+            <a href="tag/C++.html">C++</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/05306704c72047faaa0802b94e4412bd" class="PageRoot"><pre id="https://www.notion.so/a5e36bb511f340c7b101a4f0278c8841" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">p</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> cnt<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> num<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">print</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>p<span class="token operator">></span> v<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> cout<span class="token operator">&lt;&lt;</span><span class="token string">"cnt "</span><span class="token operator">&lt;&lt;</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token operator">&lt;&lt;</span><span class="token string">" num "</span><span class="token operator">&lt;&lt;</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>num<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">permutations</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>p<span class="token operator">></span> v<span class="token punctuation">,</span><span class="token keyword">int</span> num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//cout&lt;&lt;"nownum "&lt;&lt;num&lt;&lt;endl;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            p temp<span class="token operator">=</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> add<span class="token operator">=</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>num<span class="token punctuation">;</span>
+            v<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//print(v);</span>
+            <span class="token function">permutations</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span>num<span class="token operator">*</span><span class="token number">10</span><span class="token operator">+</span>add<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>i<span class="token punctuation">,</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//print(v);</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token function">permutations</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span>num<span class="token operator">*</span><span class="token number">10</span><span class="token operator">+</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        cout<span class="token operator">&lt;&lt;</span>num<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    vector<span class="token operator">&lt;</span>p<span class="token operator">></span> <span class="token function">v</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    v<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    v<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>num<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+    v<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+    v<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>num<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token function">permutations</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre><a id="https://www.notion.so/0342427d783747768c4c040f136b2011" class="Page" href="https://www.notion.so/0342427d783747768c4c040f136b2011"><div><div class="Page__Icon"><svg viewBox="0 0 30 30" style="width:1.1875em;height:1.1875em;fill:inherit;opacity:0.8"><g><path d="M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z"></path></g></svg></div><div class="Page__Title"><span class="SemanticStringArray"><span class="SemanticString">Copy of </span><span class="SemanticString">排列組合</span></span></div></div></a><a id="https://www.notion.so/31e9f5bba7424467abd12d5fa3179fe8" class="Page" href="https://www.notion.so/31e9f5bba7424467abd12d5fa3179fe8"><div><div class="Page__Icon"><svg viewBox="0 0 30 30" style="width:1.1875em;height:1.1875em;fill:inherit;opacity:0.8"><g><path d="M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z"></path></g></svg></div><div class="Page__Title"><span class="SemanticStringArray"><span class="SemanticString">Copy of </span><span class="SemanticString">排列組合</span></span></div></div></a><a id="https://www.notion.so/0c4f6ea2164a436b852dfa8e6a7e9cac" class="Page" href="https://www.notion.so/0c4f6ea2164a436b852dfa8e6a7e9cac"><div><div class="Page__Icon"><svg viewBox="0 0 30 30" style="width:1.1875em;height:1.1875em;fill:inherit;opacity:0.8"><g><path d="M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z"></path></g></svg></div><div class="Page__Title"><span class="SemanticStringArray"><span class="SemanticString">Copy of </span><span class="SemanticString">排列組合</span></span></div></div></a><a id="https://www.notion.so/727d2c0361df4f8ebb931b376bfbb8e4" class="Page" href="https://www.notion.so/727d2c0361df4f8ebb931b376bfbb8e4"><div><div class="Page__Icon"><svg viewBox="0 0 30 30" style="width:1.1875em;height:1.1875em;fill:inherit;opacity:0.8"><g><path d="M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z"></path></g></svg></div><div class="Page__Title"><span class="SemanticStringArray"><span class="SemanticString">Copy of </span><span class="SemanticString">排列組合</span></span></div></div></a></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
