@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152513368-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152513368-1');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>a135: 12250 - Language Detection&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="a135: 12250 - Language Detection">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/dashboard.png"></span>&nbsp;
+          
+          <span>儀表板</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">a135: 12250 - Language Detection</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Dec 23, 2021</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
+            <a href="tag/進階程設課程.html">進階程設課程</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/dc8f8fa888324d0bbe25c2ac8ed94a47" class="PageRoot"><pre id="https://www.notion.so/5c2e4ddb27a74541acce59155abc201b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string s<span class="token punctuation">;</span>
+    map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span>string<span class="token operator">></span> m<span class="token punctuation">;</span>
+    queue<span class="token operator">&lt;</span>string<span class="token operator">></span> q<span class="token punctuation">;</span>
+    m<span class="token punctuation">[</span><span class="token string">"HELLO"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"ENGLISH"</span><span class="token punctuation">;</span>
+    m<span class="token punctuation">[</span><span class="token string">"HOLA"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"SPANISH"</span><span class="token punctuation">;</span>
+    m<span class="token punctuation">[</span><span class="token string">"HALLO"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"GERMAN"</span><span class="token punctuation">;</span>
+    m<span class="token punctuation">[</span><span class="token string">"BONJOUR"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"FRENCH"</span><span class="token punctuation">;</span>
+    m<span class="token punctuation">[</span><span class="token string">"CIAO"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"ITALIAN"</span><span class="token punctuation">;</span>
+    m<span class="token punctuation">[</span><span class="token string">"ZDRAVSTVUJTE"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"RUSSIAN"</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin<span class="token operator">>></span>s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token operator">==</span><span class="token string">"#"</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>m<span class="token punctuation">[</span>s<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"UNKNOWN"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>q<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cout<span class="token operator">&lt;&lt;</span><span class="token string">"Case "</span><span class="token operator">&lt;&lt;</span>i<span class="token operator">&lt;&lt;</span><span class="token string">": "</span><span class="token operator">&lt;&lt;</span>q<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        i<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/4d6f3a662ff340bbb4a0bc786b13b6fe" class="Bookmark"><a href="https://zerojudge.tw/ShowProblem?problemid=a135"><h5 class="Bookmark__Title">a135. 12250 - Language Detection - 高中生程式解題系統</h5><p class="Bookmark__Desc">英文、西班牙文、德文、法文、義大利文及俄文為歐盟國家中最盛行的 6 種語言。左圖顯示英語人口在歐洲各國的密度。這些語言都有不同的字來表示英文的「HELLO」。例如西班牙文中等同於英文「HELLO」的字是「HOLA」，而德文、法文、義大利文及俄文中意思為(或相近)「HELLO」的字依序為「HALLO」、「BONJOUR」、「CIAO」和「ZDRAVSTVUJTE」。 ...</p><p class="Bookmark__Link">https://zerojudge.tw/ShowProblem?problemid=a135</p></a></div></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
