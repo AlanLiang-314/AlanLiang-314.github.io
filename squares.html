@@ -33,12 +33,10 @@
     font-size: 20px;
   }
 </style>
-  <title>[C++] struct&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <title>費曼的正方形&nbsp;|&nbsp;Alan&#39;s blog</title>
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="[C++] struct">
+  <meta property="og:title" content="費曼的正方形">
   
-  
-    <meta property="og:image" content="https://img.icons8.com/windows/256/000000/rss-logo.png">
   
   <style>
     .DateTagBar {
@@ -194,44 +192,31 @@
     <div class="Header__Spacer Header__Spacer--NoCover">
     </div>
     
-      <div class="Header__Icon">
-        <span><img class="inline-img-icon" src="https://img.icons8.com/windows/256/000000/rss-logo.png"></span>
-      </div>
-    
-    <h1 class="Header__Title">[C++] struct</h1>
+    <h1 class="Header__Title">費曼的正方形</h1>
     
       <div class="DateTagBar">
         
-          <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Aug 24, 2021</span>
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, Dec 30, 2021</span>
         
         
-          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
-            <a href="tag/C++.html">C++</a>
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
+            <a href="tag/進階程設課程.html">進階程設課程</a>
           </span>
         
       </div>
     
   </header>
-  <article id="https://www.notion.so/c6343becc0c24ba19c650b3fad947b30" class="PageRoot"><h1 id="https://www.notion.so/a2d12a3848fa44d18a5cc5d276114118" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/a2d12a3848fa44d18a5cc5d276114118"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">struct</span></span></h1><div id="https://www.notion.so/19bfcc8fea8345b59442c568c85c4efa" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">struct類似python的tuple，可以將一些相關的變數綁在一起使用，方便閱讀。</span></span></p></div><pre id="https://www.notion.so/a1b3f31d5e704ca7bbe296f9b8c94f2f" class="Code"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+  <article id="https://www.notion.so/2bcc555d215542de82cc446bbf427086" class="PageRoot"><pre id="https://www.notion.so/ffd2b383294045879d718b25b8d0ce95" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-<span class="token keyword">struct</span> <span class="token class-name">classmate</span>  <span class="token comment">//名稱</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> score<span class="token punctuation">;</span>  <span class="token comment">//宣告變數</span>
-    <span class="token keyword">int</span> seatnumber<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">long</span> <span class="token keyword">long</span> N<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin<span class="token operator">>></span>N<span class="token punctuation">)</span> cout<span class="token operator">&lt;&lt;</span>N<span class="token operator">*</span><span class="token punctuation">(</span>N<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>N<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">6</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    classmate joy<span class="token punctuation">;</span>
-    joy<span class="token punctuation">.</span>score <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-    joy<span class="token punctuation">.</span>seatnumber <span class="token operator">=</span> <span class="token number">53</span><span class="token punctuation">;</span>
-    cout<span class="token operator">&lt;&lt;</span><span class="token string">"joy.score = "</span><span class="token operator">&lt;&lt;</span>joy<span class="token punctuation">.</span>score<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout<span class="token operator">&lt;&lt;</span><span class="token string">"joy.seatnumber = "</span><span class="token operator">&lt;&lt;</span>joy<span class="token punctuation">.</span>seatnumber<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-</span></span></span></code></pre><div id="https://www.notion.so/a5fc879901f046e69a0938559bb23d33" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/b5d4af7119004718bac2bc7168635893" class="Bookmark"><a href="https://zerojudge.tw/ShowProblem?problemid=a111"><h5 class="Bookmark__Title">a111. 12149 - Feynman - 高中生程式解題系統</h5><p class="Bookmark__Desc">費曼 (Richard Phillips Feynman) 是一個有名的美國物理學家及諾貝爾物理獎得主。他主攻理論物理並倡導量子電腦。他曾訪問南美十個月，在那兒演講並享受熱帶生活。他的成名作「別鬧了，費曼先生」及「你管別人怎麼想」中也包含了他在赤道以南的經歷。 他一生的嗜好是解及建立謎題、鎖、及密碼。最近，曾在1949年接待費曼的一位南美老農夫找到一些據信屬於這位年輕物理學家的筆記。在這些有關介子及電磁學的筆記中，夾有一張餐巾紙，上寫有個簡單的謎題：「在一個 N ×N 的方格中含有幾個不同的正方形？」 下面重現了該餐巾紙上的圖，顯示 N=2 時答案為 5。</p><p class="Bookmark__Link">https://zerojudge.tw/ShowProblem?problemid=a111</p></a></div></article>
   <footer class="Footer">
   <div>&copy; Alan&#39;s blog 2019-2021</div>
   <div>&centerdot;</div>
