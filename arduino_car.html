@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3KXCGYN35T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3KXCGYN35T');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+
+  <title>Arduino車車自製旋轉編碼&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Arduino車車自製旋轉編碼">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="weather_dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/96/000000/weather-station-wind.png"></span>&nbsp;
+          
+          <span>氣象站</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">Arduino車車自製旋轉編碼</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Sat, Mar 26, 2022</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--default">
+            <a href="tag/Arduino.html">Arduino</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/082f8d31ed6e4453844e7170202f6a5d" class="PageRoot"><div id="https://www.notion.so/a1cffe5a978e4107824383ca75d5edd5" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">起因：</span></span></p></div><div id="https://www.notion.so/c66cf7ab54b748c0ad2495d6c9f662ed" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">自走車在繞圈的時候因為各種原因使我們無法精確掌控轉速，因此決定拿紅外線避障模組當旋轉編碼器，測量馬達轉速。</span></span></p></div><div id="https://www.notion.so/dc18bd86d4694d03b934009abfe434ff" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">程式碼：</span></span></p></div><div id="https://www.notion.so/61e58d9d2a36499d917dcab930505636" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">analog version</span></span></p></div><pre id="https://www.notion.so/36aa57a5291e45658ab45e1dbb8a7945" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;AFMotor.h></span></span>
+AF_DCMotor <span class="token function">motorLeft</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+AF_DCMotor <span class="token function">motorRight</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> DigitalPin <span class="token operator">=</span> A5<span class="token punctuation">;</span>   
+<span class="token keyword">int</span> AnalogPin <span class="token operator">=</span> A4<span class="token punctuation">;</span>
+<span class="token keyword">int</span> ledPin <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>   
+<span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
+<span class="token keyword">int</span> last <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>  
+
+
+<span class="token keyword">void</span> <span class="token keyword">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token builtin">Serial</span><span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token number">115200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">pinMode</span><span class="token punctuation">(</span>DigitalPin<span class="token punctuation">,</span> <span class="token constant">INPUT</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 設定數位Pin為輸入</span>
+  <span class="token function">pinMode</span><span class="token punctuation">(</span>AnalogPin<span class="token punctuation">,</span> <span class="token constant">INPUT</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 設定數位Pin為輸入</span>
+  <span class="token function">pinMode</span><span class="token punctuation">(</span>ledPin<span class="token punctuation">,</span> <span class="token constant">OUTPUT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  motorLeft<span class="token punctuation">.</span><span class="token function">setSpeed</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//motorLeft.run(FORWARD);          </span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token keyword">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">boolean</span> D_val <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>DigitalPin<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 讀取數位Pin的值</span>
+  <span class="token keyword">int</span> A_val <span class="token operator">=</span> <span class="token function">analogRead</span><span class="token punctuation">(</span>AnalogPin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">if</span><span class="token punctuation">(</span>D_val <span class="token operator">==</span> <span class="token constant">HIGH</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>  
+    <span class="token builtin">Serial</span><span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token builtin">Serial</span><span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+  <span class="token comment">//Serial.print("Analog Data: ");   </span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span>last <span class="token operator">-</span> A_val<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">85</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      cnt<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  last <span class="token operator">=</span> A_val<span class="token punctuation">;</span>
+  <span class="token comment">//Serial.print(A_val);</span>
+  <span class="token comment">//Serial.print(" "); </span>
+  <span class="token comment">//Serial.println(cnt); </span>
+  <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/148656b79c644166ba12cd8e4f6a0c62" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Digital version(影片使用版本)：</span></span></p></div><pre id="https://www.notion.so/a1061d51913346f7808e40f3bb73c6ae" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;AFMotor.h></span></span>
+AF_DCMotor <span class="token function">motorLeft</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+AF_DCMotor <span class="token function">motorRight</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> DigitalPin <span class="token operator">=</span> A5<span class="token punctuation">;</span>    
+<span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
+<span class="token keyword">int</span> last <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">boolean</span> D_val<span class="token punctuation">;</span>
+unsigned <span class="token keyword">long</span> timer<span class="token punctuation">;</span>
+unsigned <span class="token keyword">long</span> dt<span class="token punctuation">;</span>
+float rpm<span class="token punctuation">;</span>
+
+
+<span class="token keyword">void</span> <span class="token keyword">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token builtin">Serial</span><span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token number">115200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">pinMode</span><span class="token punctuation">(</span>DigitalPin<span class="token punctuation">,</span> <span class="token constant">INPUT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  motorLeft<span class="token punctuation">.</span><span class="token function">setSpeed</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  motorLeft<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>FORWARD<span class="token punctuation">)</span><span class="token punctuation">;</span>       
+  D_val <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>DigitalPin<span class="token punctuation">)</span><span class="token punctuation">;</span>   
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token keyword">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  timer <span class="token operator">=</span> <span class="token function">millis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>cnt <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  D_val <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>DigitalPin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">/*if(D_val == HIGH)  {  
+    Serial.print(1); 
+  }
+  else {
+    Serial.print(0); 
+  }*/</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span>last <span class="token operator">-</span> D_val<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    cnt<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  last <span class="token operator">=</span> D_val<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  dt <span class="token operator">=</span> <span class="token function">millis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> timer<span class="token punctuation">;</span>
+  rpm <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">60000</span><span class="token operator">/</span><span class="token function">float</span><span class="token punctuation">(</span>dt<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token builtin">Serial</span><span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rpm<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/d85b12d0c6644a99aee2fb1f85ac47b3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">影片：</span></span></p></div><div id="https://www.notion.so/acf30e571f0c4d8ab5adbe1de9e5b335" class="Embed"><div class="Embed__Content"><div class="Embed__ResponsiveContainer" style="width:854px;padding-bottom:56.20608899297424%"><iframe src="https://www.youtube.com/embed/BhrqVrVfb9A?feature=oembed" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" allowfullscreen=""></iframe></div></div><p class="Embed__Caption"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/731f523b235249889ec580941e31faca" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">參考資料：</span></span></p></div><div id="https://www.notion.so/9f419e8bf8ac4379bc58edd63629ff28" class="Bookmark"><a href="https://atceiling.blogspot.com/2020/10/arduino86tcrt5000.html"><h5 class="Bookmark__Title">Arduino筆記(86)：紅外線反射尋跡/避障模組TCRT5000</h5><p class="Bookmark__Desc">買了這個模組有一段時間了，最近重新整理一下手邊的模組，利用這幾天實作一下這個模組的功能。 紅外線反射尋跡/避障模組 TCRT5000 利用紅外線反射的特性，有兩種可應用的功能，一是偵測是否有物體靠近，當模組被裝在小車時，可以偵測前方是否有障礙物；另一個功能是藉由反射面的顏色改變，來判斷小車是否偏離畫好的路線。以下是實作說明及結果。 TCRT5000尋跡感測器模組的紅外發射二極體不斷發射紅外線，當發射出的紅外線沒有被反射回來或被反射回來但強度不夠大時，光敏三極管一直處於關斷狀態，此時模組的輸出端為低電位，指示二極體一直處於熄滅狀態；被檢測物體出現在檢測範圍內時，紅外線被反射回來且強度足夠大，光敏三極管此時模組的輸出端為高電位，指示二極體燈被點亮。 產品規格： 採用TCRT5000紅外反射感測器 檢測反射距離：1mm~25mm適用 工作電壓3.3V-5V 輸出形式 ：數位開關量輸出（0和1）及類比輸出兩種 使用寬電壓LM393比較器 #include // 引用 LiquidCrystal_I2C Library LiquidCrystal_I2C lcd(0x27,16,2); // 設定 LCD 位址為 0x27，有 16 個字元 2 列 int DigitalPin = 2; int AnalogPin = A0; int ledPin = 13; void setup() { Serial.begin(115200); pinMode(DigitalPin, INPUT); // 設定數位Pin為輸入 pinMode(AnalogPin, INPUT);</p><p class="Bookmark__Link">https://atceiling.blogspot.com/2020/10/arduino86tcrt5000.html</p></a></div><div id="https://www.notion.so/f34d8c9e78094fd694971b790114ba23" class="Bookmark"><a href="https://yunlinsong.blogspot.com/2018/03/arduino-arduino-serial-plotter.html"><h5 class="Bookmark__Title">Arduino 序列繪圖家 (Arduino serial plotter)</h5><p class="Bookmark__Desc">A blog about arduino, raspberry pi, programming, 3D modeling, Scratch, TinkcerCAD, math, STEAM, and maker project.</p><p class="Bookmark__Link">https://yunlinsong.blogspot.com/2018/03/arduino-arduino-serial-plotter.html</p></a></div><div id="https://www.notion.so/988ef64831df48eaa989c68436e26fb1" class="Bookmark"><a href="http://robotrabbit.blogspot.com/2012/12/pid-pid.html?m=1"><h5 class="Bookmark__Title">PID控制理論---紅外線循跡車(五)---調整PID參數</h5><p class="Bookmark__Desc">作者J. Sluka http://www.inpharmix.com/jps/PID_Controller_For_Lego_Mindstorms_Robots.html 話說先前提過PID控制理論中的P和I了 PID控制理論---紅外線循跡...</p><p class="Bookmark__Link">http://robotrabbit.blogspot.com/2012/12/pid-pid.html?m=1</p></a></div><div id="https://www.notion.so/60758216f85443efaa7a0f1b40eaa9cc" class="Bookmark"><a href="https://m.facebook.com/nt/screen/?params=%7B%22note_id%22%3A3338555286260197%7D&amp;path=%2Fnotes%2Fnote%2F&amp;_rdr"><h5 class="Bookmark__Title">You&#x27;re Temporarily Blocked</h5><p class="Bookmark__Desc">It looks like you were misusing this feature by going too fast. You&#x27;ve been temporarily blocked from using it. If you think this doesn&#x27;t go against our Community Standards let us know.</p><p class="Bookmark__Link">https://m.facebook.com/nt/screen/?params=%7B%22note_id%22%3A3338555286260197%7D&amp;path=%2Fnotes%2Fnote%2F&amp;_rdr</p></a></div><div id="https://www.notion.so/7fc2d2ba5fe84c18b3be6999b716c548" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>

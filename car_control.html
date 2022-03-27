@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3KXCGYN35T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3KXCGYN35T');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+
+  <title>Arduino自走車控制&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Arduino自走車控制">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="weather_dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/96/000000/weather-station-wind.png"></span>&nbsp;
+          
+          <span>氣象站</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">Arduino自走車控制</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Sat, Mar 26, 2022</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--default">
+            <a href="tag/Arduino.html">Arduino</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--orange">
+            <a href="tag/C++.html">C++</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/8ef24193c51c4cb9b112a459bb938722" class="PageRoot"><div id="https://www.notion.so/30cfacb2d7c54cc2b1277a0f168391e4" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">程式碼：</span></span></p></div><pre id="https://www.notion.so/aa2c7411812349afad8b9e791a82d562" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token comment">/*
+ 車車資訊
+ 輪距 = 13cm
+ 輪半徑 = 3.3cm
+ */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;AFMotor.h></span></span>
+AF_DCMotor <span class="token function">motorLeft</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+AF_DCMotor <span class="token function">motorRight</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> DigitalPinLeft <span class="token operator">=</span> A5<span class="token punctuation">;</span>   
+<span class="token keyword">int</span> DigitalPinRight <span class="token operator">=</span> A2<span class="token punctuation">;</span> 
+   
+<span class="token keyword">int</span> cnt1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
+<span class="token keyword">int</span> last1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> cnt2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
+<span class="token keyword">int</span> last2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+unsigned <span class="token keyword">long</span> timer<span class="token punctuation">;</span>
+unsigned <span class="token keyword">long</span> dt<span class="token punctuation">;</span>
+float rpm<span class="token punctuation">;</span>
+
+const float tire_radius <span class="token operator">=</span> <span class="token number">3.3</span><span class="token punctuation">;</span> <span class="token comment">//cm</span>
+const <span class="token keyword">int</span> tire_distance <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">void</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token keyword">int</span> cm<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">int</span> <span class="token builtin">turn</span> <span class="token operator">=</span> <span class="token punctuation">(</span>cm<span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>PI<span class="token operator">*</span>tire_radius<span class="token operator">*</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  cnt1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  cnt2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  motorLeft<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>FORWARD<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  motorRight<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>FORWARD<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>cnt1 <span class="token operator">&lt;</span> <span class="token builtin">turn</span> <span class="token operator">||</span> cnt2 <span class="token operator">&lt;</span><span class="token builtin">turn</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">boolean</span> D_val1 <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>DigitalPinLeft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">boolean</span> D_val2 <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>DigitalPinRight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span>last1 <span class="token operator">-</span> D_val1<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    cnt1<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>cnt1 <span class="token operator">>=</span> <span class="token builtin">turn</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      motorLeft<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>RELEASE<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span>last2 <span class="token operator">-</span> D_val2<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    cnt2<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>cnt2 <span class="token operator">>=</span> <span class="token builtin">turn</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      motorRight<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>RELEASE<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  last1 <span class="token operator">=</span> D_val1<span class="token punctuation">;</span> 
+  last2 <span class="token operator">=</span> D_val2<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">turnLeft</span><span class="token punctuation">(</span><span class="token keyword">int</span> degree<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">int</span> <span class="token builtin">turn</span> <span class="token operator">=</span> <span class="token punctuation">(</span>degree<span class="token operator">*</span>tire_distance<span class="token operator">/</span>tire_radius<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">72</span><span class="token operator">*</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+  cnt1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  motorLeft<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>FORWARD<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>cnt1 <span class="token operator">&lt;</span> <span class="token builtin">turn</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">boolean</span> D_val1 <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>DigitalPinLeft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">boolean</span> D_val2 <span class="token operator">=</span> <span class="token function">digitalRead</span><span class="token punctuation">(</span>DigitalPinRight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span>last1 <span class="token operator">-</span> D_val1<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    cnt1<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>cnt1 <span class="token operator">>=</span> <span class="token builtin">turn</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      motorLeft<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>RELEASE<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  last1 <span class="token operator">=</span> D_val1<span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">void</span> <span class="token keyword">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token builtin">Serial</span><span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token number">115200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">pinMode</span><span class="token punctuation">(</span>DigitalPinLeft<span class="token punctuation">,</span> <span class="token constant">INPUT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token function">pinMode</span><span class="token punctuation">(</span>DigitalPinRight<span class="token punctuation">,</span> <span class="token constant">INPUT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  motorLeft<span class="token punctuation">.</span><span class="token function">setSpeed</span><span class="token punctuation">(</span><span class="token number">75</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  motorRight<span class="token punctuation">.</span><span class="token function">setSpeed</span><span class="token punctuation">(</span><span class="token number">125</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
+  <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token keyword">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token function">move</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1000000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/67d5a3a1d15a4f9198976a8af78f0fb3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">move函式：向前直行，單位為cm，誤差正負5cm</span></span></p></div><div id="https://www.notion.so/538b615adb084f508d778887861ef1ff" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">turnLeft函式：向左轉彎，單位為度，誤差正負9度</span></span></p></div><div id="https://www.notion.so/6e74b2d0c95c4fc2a5133e3fc7508fcf" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/3d61aabb7751453c91ad174763a6730c" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">影片：</span></span></p></div><div id="https://www.notion.so/734b2f5c781d41ca8d89861d0085c9e4" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">待更新</span></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
