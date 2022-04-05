@@ -152,6 +152,8 @@
     
   
     
+  
+    
       <span class="Navbar__Delim">&centerdot;</span>
       <a href="certification.html">
         <div class="Navbar__Btn">
@@ -238,21 +240,21 @@ AF_DCMotor <span class="token function">motorRight</span><span class="token punc
 
 <span class="token keyword">int</span> DigitalPinLeft <span class="token operator">=</span> A5<span class="token punctuation">;</span>   
 <span class="token keyword">int</span> DigitalPinRight <span class="token operator">=</span> A2<span class="token punctuation">;</span> 
-   
+
+  
 <span class="token keyword">int</span> cnt1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
 <span class="token keyword">int</span> last1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> cnt2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
 <span class="token keyword">int</span> last2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 unsigned <span class="token keyword">long</span> timer<span class="token punctuation">;</span>
 unsigned <span class="token keyword">long</span> dt<span class="token punctuation">;</span>
-float rpm<span class="token punctuation">;</span>
 
-const float tire_radius <span class="token operator">=</span> <span class="token number">3.3</span><span class="token punctuation">;</span> <span class="token comment">//cm</span>
-const <span class="token keyword">int</span> tire_distance <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
+const float tire_radius <span class="token operator">=</span> <span class="token number">3.3</span><span class="token punctuation">;</span> <span class="token comment">//輪半徑 = 3.3cm</span>
+const <span class="token keyword">int</span> tire_distance <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span> <span class="token comment">//輪距 = 13cm</span>
 
 
 <span class="token keyword">void</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token keyword">int</span> cm<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token keyword">int</span> <span class="token builtin">turn</span> <span class="token operator">=</span> <span class="token punctuation">(</span>cm<span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>PI<span class="token operator">*</span>tire_radius<span class="token operator">*</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token builtin">turn</span> <span class="token operator">=</span> <span class="token punctuation">(</span>cm<span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>PI<span class="token operator">*</span>tire_radius<span class="token operator">*</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//每個turn約等於36度</span>
   cnt1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
   cnt2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
   motorLeft<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>FORWARD<span class="token punctuation">)</span><span class="token punctuation">;</span>

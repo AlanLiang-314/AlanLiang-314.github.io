@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <base href="../">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KXCGYN35T"></script>
 <script>
@@ -35,11 +34,16 @@
   }
 </style>
 
-  <title>#氣象站 | Alan&#39;s blog</title>
+  <title>閱讀器開發&nbsp;|&nbsp;Alan&#39;s blog</title>
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="#氣象站 | Alan&#39;s blog">
-  <meta name="description" content="Posts with tag #氣象站">
-  <meta property="og:description" content="Posts with tag #氣象站">
+  <meta property="og:title" content="閱讀器開發">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -203,32 +207,33 @@
   
 </nav>
   <header class="Header">
-    <div class="Header__Spacer--NoCover"></div>
-    <h1 class="Header__Title">#氣象站</h1>
-  </header>
-  <article class="ArticleList">
-
-  <article class="Article">
-    <h3 class="Article__Title">
-      
-      <a href="weather_station_setup.html">
-        氣象站建置
-      </a>
-    </h3>
     
-    <div class="DateTagBar">
-      
-        <span class="DateTagBar__Item DateTagBar__Date">Posted on Sat, Mar 5, 2022</span>
-      
-      
-        <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--pink">
-          <a href="tag/氣象站.html">氣象站</a>
-        </span>
-      
+    <div class="Header__Spacer Header__Spacer--NoCover">
     </div>
-  </article>
-
-</article>
+    
+    <h1 class="Header__Title">閱讀器開發</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Sat, Apr 2, 2022</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--green">
+            <a href="tag/python.html">python</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/560c3d2610764c52b63bee6cf5d21abc" class="PageRoot"><pre id="https://www.notion.so/44996c8fe7754b7f80260bfdc79196f1" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token keyword">import</span> lcd<span class="token punctuation">,</span> image
+lcd<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+img <span class="token operator">=</span> image<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># image.font_load(image.UTF8, 16, 16, 0xA00000)</span>
+image<span class="token punctuation">.</span>font_load<span class="token punctuation">(</span>image<span class="token punctuation">.</span>UTF8<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token string">'/sd/0xA00000_font_uincode_16_16_tblr.Dzk'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+   img<span class="token punctuation">.</span>draw_string<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> i<span class="token operator">*</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token string">b'測試h123'</span><span class="token punctuation">,</span> x_spacing<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> mono_space<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> 
+image<span class="token punctuation">.</span>font_free<span class="token punctuation">(</span><span class="token punctuation">)</span>
+lcd<span class="token punctuation">.</span>display<span class="token punctuation">(</span>img<span class="token punctuation">)</span></span></span></span></code></pre></article>
   <footer class="Footer">
   <div>&copy; Alan&#39;s blog 2019-2021</div>
   <div>&centerdot;</div>
