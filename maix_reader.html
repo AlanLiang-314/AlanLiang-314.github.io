@@ -158,6 +158,8 @@
     
   
     
+  
+    
       <span class="Navbar__Delim">&centerdot;</span>
       <a href="certification.html">
         <div class="Navbar__Btn">
@@ -229,15 +231,23 @@
       </div>
     
   </header>
-  <article id="https://www.notion.so/560c3d2610764c52b63bee6cf5d21abc" class="PageRoot"><pre id="https://www.notion.so/44996c8fe7754b7f80260bfdc79196f1" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token keyword">import</span> lcd<span class="token punctuation">,</span> image
+  <article id="https://www.notion.so/560c3d2610764c52b63bee6cf5d21abc" class="PageRoot"><pre id="https://www.notion.so/44996c8fe7754b7f80260bfdc79196f1" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token keyword">import</span> uos
+<span class="token keyword">import</span> lcd<span class="token punctuation">,</span> image
+
 lcd<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
 img <span class="token operator">=</span> image<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token comment"># image.font_load(image.UTF8, 16, 16, 0xA00000)</span>
 image<span class="token punctuation">.</span>font_load<span class="token punctuation">(</span>image<span class="token punctuation">.</span>UTF8<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token string">'/sd/0xA00000_font_uincode_16_16_tblr.Dzk'</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-   img<span class="token punctuation">.</span>draw_string<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> i<span class="token operator">*</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token string">b'測試h123'</span><span class="token punctuation">,</span> x_spacing<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> mono_space<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> 
-image<span class="token punctuation">.</span>font_free<span class="token punctuation">(</span><span class="token punctuation">)</span>
-lcd<span class="token punctuation">.</span>display<span class="token punctuation">(</span>img<span class="token punctuation">)</span></span></span></span></code></pre></article>
+<span class="token comment">#for i in range(1):</span>
+   <span class="token comment">#img.draw_string(0, i*40, b'測試測試測試測試測試測試測試', x_spacing=2, mono_space=1) </span>
+
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'novel_simple.txt'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+<span class="token comment"># 	f.write('print(Hello, world!)\r\n')</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        img<span class="token punctuation">.</span>draw_string<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> i<span class="token operator">*</span><span class="token number">20</span><span class="token punctuation">,</span> f<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x_spacing<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> mono_space<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    image<span class="token punctuation">.</span>font_free<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    lcd<span class="token punctuation">.</span>display<span class="token punctuation">(</span>img<span class="token punctuation">)</span></span></span></span></code></pre></article>
   <footer class="Footer">
   <div>&copy; Alan&#39;s blog 2019-2021</div>
   <div>&centerdot;</div>

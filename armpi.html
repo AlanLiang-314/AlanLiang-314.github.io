@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3KXCGYN35T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3KXCGYN35T');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+
+  <title>ArmPi機械手臂寫字機器人&nbsp;|&nbsp;Alan&#39;s blog</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="ArmPi機械手臂寫字機器人">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1c38186-5e33-436b-be79-90022a4085d3%2F-_(2).png?table=collection&amp;id=e12a1192-37fa-42fd-bf61-565dadbc8834"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="certification.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/dotty/80/000000/paper.png"></span>&nbsp;
+          
+          <span>檢定成績</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="weather_dashboard.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/windows/96/000000/weather-station-wind.png"></span>&nbsp;
+          
+          <span>氣象站</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="C++_notes.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/100/000000/c-plus-plus-logo.png"></span>&nbsp;
+          
+          <span>C++筆記</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="https://img.icons8.com/ios/250/000000/user-male.png"></span>&nbsp;
+          
+          <span>關於</span>
+        </div>
+      </a>
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">ArmPi機械手臂寫字機器人</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Thu, May 19, 2022</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--green">
+            <a href="tag/python.html">python</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/55d29f69e388421d983d18ba504ccb96" class="PageRoot"><h2 id="https://www.notion.so/3e0f198b43144802adb85da63e293a28" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/3e0f198b43144802adb85da63e293a28"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString"> wakuwaku 版本</span></span></h2><div id="https://www.notion.so/384026b5831146bb979b7770bbc03824" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">程式碼：</span></span></p></div><pre id="https://www.notion.so/de749fdf9dda4c55ab4128260634a92d" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token comment">#!/usr/bin/python3</span>
+<span class="token comment"># coding=utf8</span>
+<span class="token keyword">import</span> sys
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'/home/pi/ArmPi/'</span><span class="token punctuation">)</span>
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> threading
+<span class="token keyword">from</span> ArmIK<span class="token punctuation">.</span>Transform <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> ArmIK<span class="token punctuation">.</span>ArmMoveIK <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">import</span> HiwonderSDK<span class="token punctuation">.</span>Board <span class="token keyword">as</span> Board
+
+<span class="token keyword">if</span> sys<span class="token punctuation">.</span>version_info<span class="token punctuation">.</span>major <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Please run this program with python3!'</span><span class="token punctuation">)</span>
+    sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+AK <span class="token operator">=</span> ArmIK<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+h <span class="token operator">=</span> <span class="token number">2.5</span>
+x <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span>
+y <span class="token operator">=</span> <span class="token number">20</span>
+<span class="token comment">#z = 5</span>
+pen_up <span class="token operator">=</span> <span class="token number">0</span>
+
+data <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0.5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1.5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1.5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1.5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span>
+
+
+
+
+
+<span class="token keyword">def</span> <span class="token function">initMove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    Board<span class="token punctuation">.</span>setBusServoPulse<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">500</span> <span class="token operator">-</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+    Board<span class="token punctuation">.</span>setBusServoPulse<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+    AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">1500</span><span class="token punctuation">)</span>
+    
+<span class="token keyword">def</span> <span class="token function">move</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> pen_up<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pen_up <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+        pen_up <span class="token operator">=</span> <span class="token number">1</span>
+    x<span class="token operator">=</span>a
+    y<span class="token operator">=</span>b
+    data<span class="token operator">=</span>AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">1000</span><span class="token operator">*</span><span class="token number">1.7</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> pen_up<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pen_up<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+        pen_up<span class="token operator">=</span><span class="token number">0</span>
+    x<span class="token operator">=</span>a
+    y<span class="token operator">=</span>b
+    data<span class="token operator">=</span>AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">)</span>
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">1000</span><span class="token operator">*</span><span class="token number">1.7</span><span class="token punctuation">)</span>
+    
+    
+initMove<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">)</span>
+a <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"pen"</span><span class="token punctuation">)</span>
+setBusServoPulse<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"go"</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+
+a <span class="token operator">=</span> <span class="token string">"0123"</span>
+cursor_x <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span>
+cursor_y <span class="token operator">=</span> <span class="token number">28</span>
+dis <span class="token operator">=</span> <span class="token number">2</span> <span class="token comment">#字母間距為1.5倍的字母寬</span>
+font_size <span class="token operator">=</span> <span class="token number">2</span> <span class="token comment">#1為原始大小</span>
+<span class="token keyword">for</span> char <span class="token keyword">in</span> a<span class="token punctuation">:</span>
+    num <span class="token operator">=</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'0'</span><span class="token punctuation">)</span>
+    instruct <span class="token operator">=</span> data<span class="token punctuation">[</span>num<span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>instruct<span class="token punctuation">)</span>
+    
+    <span class="token keyword">for</span> step <span class="token keyword">in</span> instruct<span class="token punctuation">:</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"move"</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">','</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            move<span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">,</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"draw"</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">','</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            draw<span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">,</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span>
+    
+    cursor_x <span class="token operator">+=</span> dis<span class="token operator">*</span>font_size
+
+move<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">24</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> char <span class="token keyword">in</span> a<span class="token punctuation">:</span>
+    num <span class="token operator">=</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'0'</span><span class="token punctuation">)</span>
+    instruct <span class="token operator">=</span> data<span class="token punctuation">[</span>num<span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>instruct<span class="token punctuation">)</span>
+    
+    <span class="token keyword">for</span> step <span class="token keyword">in</span> instruct<span class="token punctuation">:</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"move"</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">','</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            move<span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">,</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"draw"</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">','</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            draw<span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">,</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span>
+    
+    cursor_x <span class="token operator">+=</span> dis<span class="token operator">*</span>font_size
+
+move<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span></span></span></span></code></pre><div id="https://www.notion.so/eb97e1bfe64641349d16df0fb2efdfd1" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">範例影片：</span></span></p></div><div id="https://www.notion.so/ada57404e0014acb93998d0a03ed7c99" class="Embed"><div class="Embed__Content"><div class="Embed__ResponsiveContainer" style="width:854px;padding-bottom:56.20608899297424%"><iframe src="https://www.youtube.com/embed/QUoyOEvHzqE?feature=oembed" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" allowfullscreen=""></iframe></div></div><p class="Embed__Caption"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/c8e838fbe2f54609b0c8c3a7f6f32466" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">結果：</span></span></p></div><div id="https://www.notion.so/d76f0b859804435cbdb8f1e59fe45e7f" class="Image Image--PageWidth"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb4b50964-083c-4802-bfae-47b5baa96287%2FPXL_20220519_061638392.MP.jpg?width=4032&amp;table=block&amp;id=d76f0b85-9804-435c-bdb8-f1e59fe45e7f"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb4b50964-083c-4802-bfae-47b5baa96287%2FPXL_20220519_061638392.MP.jpg?width=4032&amp;table=block&amp;id=d76f0b85-9804-435c-bdb8-f1e59fe45e7f" style="width:100%"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><h2 id="https://www.notion.so/ac6f8eaff5d64c438aa4382d99b36584" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/ac6f8eaff5d64c438aa4382d99b36584"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString"> 數字版本</span></span></h2><div id="https://www.notion.so/36c206be606c4d8e9d739dd9a4fe73d3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">程式碼：</span></span></p></div><pre id="https://www.notion.so/b08b1dc6bb284db8b8e29b3850f6970b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token comment">#!/usr/bin/python3</span>
+<span class="token comment"># coding=utf8</span>
+<span class="token keyword">import</span> sys
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'/home/pi/ArmPi/'</span><span class="token punctuation">)</span>
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> threading
+<span class="token keyword">from</span> ArmIK<span class="token punctuation">.</span>Transform <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> ArmIK<span class="token punctuation">.</span>ArmMoveIK <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">import</span> HiwonderSDK<span class="token punctuation">.</span>Board <span class="token keyword">as</span> Board
+
+<span class="token keyword">if</span> sys<span class="token punctuation">.</span>version_info<span class="token punctuation">.</span>major <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Please run this program with python3!'</span><span class="token punctuation">)</span>
+    sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+AK <span class="token operator">=</span> ArmIK<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+h <span class="token operator">=</span> <span class="token number">2.5</span>
+x <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span>
+y <span class="token operator">=</span> <span class="token number">20</span>
+<span class="token comment">#z = 5</span>
+pen_up <span class="token operator">=</span> <span class="token number">0</span>
+
+data <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token punctuation">]</span>
+
+
+
+<span class="token keyword">def</span> <span class="token function">initMove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    Board<span class="token punctuation">.</span>setBusServoPulse<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">500</span> <span class="token operator">-</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+    Board<span class="token punctuation">.</span>setBusServoPulse<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+    AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">1500</span><span class="token punctuation">)</span>
+    
+<span class="token keyword">def</span> <span class="token function">move</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> pen_up<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pen_up <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+        pen_up <span class="token operator">=</span> <span class="token number">1</span>
+    x<span class="token operator">=</span>a
+    y<span class="token operator">=</span>b
+    data<span class="token operator">=</span>AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">1000</span><span class="token operator">*</span><span class="token number">1.7</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> pen_up<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pen_up<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+        pen_up<span class="token operator">=</span><span class="token number">0</span>
+    x<span class="token operator">=</span>a
+    y<span class="token operator">=</span>b
+    data<span class="token operator">=</span>AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">)</span>
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">1000</span><span class="token operator">*</span><span class="token number">1.7</span><span class="token punctuation">)</span>
+    
+    
+initMove<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+AK<span class="token punctuation">.</span>setPitchRangeMoving<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">)</span>
+a <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"pen"</span><span class="token punctuation">)</span>
+setBusServoPulse<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token comment">#b = input("go")</span>
+<span class="token comment">#time.sleep(0.1)</span>
+
+a <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"please type some number: "</span><span class="token punctuation">)</span>
+cursor_x <span class="token operator">=</span> <span class="token number">0</span>
+cursor_y <span class="token operator">=</span> <span class="token number">28</span>
+dis <span class="token operator">=</span> <span class="token number">1.5</span> <span class="token comment">#字母間距為1.5倍的字母寬</span>
+font_size <span class="token operator">=</span> <span class="token number">1</span> <span class="token comment">#1為原始大小</span>
+<span class="token keyword">for</span> char <span class="token keyword">in</span> a<span class="token punctuation">:</span>
+    num <span class="token operator">=</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'0'</span><span class="token punctuation">)</span>
+    instruct <span class="token operator">=</span> data<span class="token punctuation">[</span>num<span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>instruct<span class="token punctuation">)</span>
+    
+    <span class="token keyword">for</span> step <span class="token keyword">in</span> instruct<span class="token punctuation">:</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"move"</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">','</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            move<span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">,</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"draw"</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">','</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            draw<span class="token punctuation">(</span>step<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_x<span class="token punctuation">,</span>step<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span>font_size<span class="token operator">+</span>cursor_y<span class="token punctuation">)</span>
+    
+    cursor_x <span class="token operator">+=</span> dis<span class="token operator">*</span>font_size
+    
+move<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span></span></span></span></code></pre><div id="https://www.notion.so/55a93281b2d141ee91778ad4968bbc34" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">範例影片：</span></span></p></div><div id="https://www.notion.so/be1b84881dc84d119a9d6e64b7f2379b" class="Embed"><div class="Embed__Content"><div class="Embed__ResponsiveContainer" style="width:854px;padding-bottom:56.20608899297424%"><iframe src="https://www.youtube.com/embed/QIhf6iASQCE?feature=oembed" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" allowfullscreen=""></iframe></div></div><p class="Embed__Caption"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/479bf612406d4785bcac531893ab4f74" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; Alan&#39;s blog 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
